@@ -1,0 +1,18 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Hacky Hour 2021"
+# add theme
+theme = "hugo-theme-learn"
+
+# disable table of contents
+disableToc = "true"
+
+# for search functionality
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+
+## learn website-specific params
+[params]
+    author = "Hugh Cross"
+    themeVariant = "green"
