@@ -9,7 +9,7 @@ disableToc = "true"
 
 # for search functionality
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+    home = [ "HTML", "RSS", "JSON"]
 
 
 ## learn website-specific params
