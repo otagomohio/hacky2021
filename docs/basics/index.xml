@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Basics on Hacky Hour 2021</title>
+    <link>http://example.org/basics/</link>
+    <description>Recent content in Basics on Hacky Hour 2021</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Mar 2021 12:52:56 +1300</lastBuildDate><atom:link href="http://example.org/basics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Transferring Files</title>
+      <link>http://example.org/basics/transferring_files/</link>
+      <pubDate>Wed, 24 Mar 2021 12:58:37 +1300</pubDate>
+      
+      <guid>http://example.org/basics/transferring_files/</guid>
+      <description>Following are some example commands for transferring files and folders to and from the server.
+Remember:
+  You must have permissions to access the target folder on the server to which you wish to move your file
+  Your terminal must be on your computer to move files (that is, your pwd should be somewhere on your own computer)
+  Transfer files from your own computer to the server scp /path/to/file/FILENAME mahuika:/path/to/target/folder grep -c &amp;#39;&amp;gt;&amp;#39; FILENAME (Note the colon &amp;lsquo;:&amp;rsquo; after the server name.</description>
+    </item>
+    
+  </channel>
+</rss>
