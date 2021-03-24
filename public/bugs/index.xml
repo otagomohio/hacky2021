@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bugs on Hacky Hour 2021</title>
-    <link>http://example.org/bugs/</link>
+    <link>https://otagomohio.github.io/hacky2021/bugs/</link>
     <description>Recent content in Bugs on Hacky Hour 2021</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Mar 2021 16:07:28 +1300</lastBuildDate><atom:link href="http://example.org/bugs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Mar 2021 16:07:28 +1300</lastBuildDate><atom:link href="https://otagomohio.github.io/hacky2021/bugs/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
