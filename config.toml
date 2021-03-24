@@ -11,7 +11,7 @@ disableToc = "true"
 [outputs]
     home = [ "HTML", "RSS", "JSON"]
 
-publishDir = "docs"
+#publishDir = "docs"
 
 ## learn website-specific params
 [params]
