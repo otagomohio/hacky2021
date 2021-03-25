@@ -19,7 +19,6 @@ Remember:
 
 ```bash
 scp /path/to/file/FILENAME mahuika:/path/to/target/folder
-grep -c '>' FILENAME
 ```
 
 (Note the colon ':' after the server name.) 
@@ -32,10 +31,7 @@ scp FILENAME mahuika:/path/to/target/folder
 
 Likewise, if you are transferring the file to your home folder on NeSI, then you do not need the path (although remember that your NeSI home folder does not have much space):
 
-```python
-for i in team:
-    print(i)
-
+```bash
 scp FILENAME mahuika:
 ```
 
