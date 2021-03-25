@@ -17,3 +17,6 @@ disableToc = "true"
 [params]
     author = "Hugh Cross"
     themeVariant = "green"
+    #disableLandingPageButton = "false"
+    landingPageURL = "https://otagomohio.github.io/hacky2021/"
+
