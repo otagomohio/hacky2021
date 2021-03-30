@@ -6,12 +6,14 @@ chapter = true
 pre = '<i class="fab fa-mixcloud"></i> '
 +++
 
-### NeSI
+
 
 # Using the NeSI server
 
-"That is the exploration that awaits you! Not mapping stars and studying nebula, 
+*"That is the exploration that awaits you!*
 
-but charting the unknown possibilities of existence." 
+*Not mapping stars and studying nebula,*
+
+*but charting the unknown possibilities of existence."*
 
    -Leonard Nimoy

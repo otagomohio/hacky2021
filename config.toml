@@ -20,3 +20,6 @@ disableToc = "true"
     disableLandingPageButton = true
     landingPageURL = "/hacky2021/"
 
+[markup.goldmark.renderer]
+    unsafe=true
+    

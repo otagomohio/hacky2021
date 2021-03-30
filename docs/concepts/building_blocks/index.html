@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/hacky2021/images/favicon.png" type="image/png">
 
-    <title>Debugging :: Hacky Hour 2021</title>
+    <title>Building blocks :: Hacky Hour 2021</title>
 
     
     <link href="/hacky2021/css/nucleus.css?1617144769" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/hacky2021/bugs/">
+  <body class="" data-url="/hacky2021/concepts/building_blocks/">
     <nav id="sidebar" class="">
 
 
@@ -190,8 +190,8 @@
   
     
     <li data-nav-id="/hacky2021/bugs/" title="Debugging" class="dd-item
-        parent
-        active
+        
+        
         
         ">
       <a href="/hacky2021/bugs/">
@@ -214,7 +214,7 @@
   
     
     <li data-nav-id="/hacky2021/concepts/" title="Concepts" class="dd-item
-        
+        parent
         
         
         ">
@@ -240,7 +240,7 @@
  
   
     
-      <li data-nav-id="/hacky2021/concepts/building_blocks/" title="Building blocks" class="dd-item ">
+      <li data-nav-id="/hacky2021/concepts/building_blocks/" title="Building blocks" class="dd-item active">
         <a href="/hacky2021/concepts/building_blocks/">
         Building blocks
         
@@ -292,6 +292,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -302,7 +304,13 @@
             
           
           
-            <a href='/hacky2021/'>Hacky Hour 2021</a> > Debugging
+            
+            
+          
+          
+            <a href='/hacky2021/'>Hacky Hour 2021</a> > <a href='/hacky2021/concepts/'>Concepts</a> > Building blocks
+          
+        
           
         
           
@@ -311,6 +319,17 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lower-level-building-blocks">Lower-level building blocks</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -318,31 +337,35 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Building blocks
+            </h1>
           
 
         
 
 
+<p>Most bioinformatic methods can be organised into a few basic concepts. I have organised these in terms of how the method influences the sequence files and how it modifies or what information is gathered from them. I use the term &lsquo;sequence file&rsquo; very broadly; it can encompass anything from raw reads to assembled contigs to scaffolds to whole organelle or chromosome assemblies. I have furthur divided these into two main classes: lower-level processes and higher-level processes. These are explained in detail below.</p>
+<h2 id="lower-level-building-blocks">Lower-level building blocks</h2>
+<p>I identify three major types of lower-level processes:</p>
+<ol>
+<li><span style="color:red"><strong>Pattern searching</strong></span> &ndash; finding patterns within a sequence</li>
+<li><span style="color:blue"><strong>Mapping</strong></span> &ndash; pairwise alignment of a sequence against a database</li>
+<li><span style="color:green"><strong>Clustering</strong></span> &ndash; group together a collection of sequences based on identity</li>
+</ol>
+<p>Each of these process types can encompass or be a part of many programs, and be applied to multiple sequence types&ndash;as outlined above. <span style="color:red"><strong>Pattern searching</strong></span> is typical of early steps in most processing of raw reads, and includes adapter and primer removal, as well as quality filtering. However, it also is involved in many downstream processing steps, including searching for coding regions or CG islands on assembled contigs, or repeats across whole genome assemblies. Note that often these searches are looking for patterns based on existing references, such as adapter sequence files or repeat databases, but they can also involve looking for patterns not neccesarily dependent on any external reference, such as start and stop codons along a contig.</p>
+<p>For <span style="color:blue"><strong>Mapping</strong></span> processes, these involve searching whole sequences against some kind of reference database. As with Pattern searching, these can involve a BLAST search of short reads or assembled contigs or aligning RNA reads to a transcriptome. Kraken, HMM</p>
+<p>These first two processes may seem like the same thing, and indeed they are more or less two sides of the same coin. But because they are usually very separate in pipelines I am keeping them distinct. I distinguish them by what is the subject and what is the object of the search: generally Pattern searching is looking for elements of a database somewhere along a sequence (database is subject, sequence is object), wherease Mapping is searching in a database for whole sequence reads (sequence is subject, database is object). Though for many searches, especially local alignments, matches to only part of the sequence may be found, it is usually the whole sequence that is the search query. Because of the nature of both of these (especially where pattern searching is looking for shorter and often, fragmentary patterns), generally the algorithms used for both are different.</p>
+<p>The third type, <span style="color:green"><strong>Clustering</strong></span>,</p>
 
-	<h1 id="how-to-find-and-solve-common-problems">How to find and solve common problems</h1>
-<p><em>&ldquo;Give a man a fish and feed him for a day.</em></p>
-<p><em>Don&rsquo;t teach a man to fish and feed yourself.</em></p>
-<p><em>He&rsquo;s a grown man. And fishing&rsquo;s not that hard&rdquo;</em></p>
-<p>-Ron Swanson</p>
 
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -443,7 +466,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -460,8 +482,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -475,6 +495,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -499,10 +520,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/hacky2021/nesi/" title="NeSI"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/hacky2021/concepts/" title="Concepts"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/hacky2021/concepts/" title="Concepts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/hacky2021/basics/" title="Basics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -534,3 +555,4 @@
 
   </body>
 </html>
+

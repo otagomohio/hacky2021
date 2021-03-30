@@ -6,10 +6,9 @@ chapter = true
 pre = '<i class="fas fa-wrench"></i> '
 +++
 
-### Basics
 
-# terminal command knowhow
+# basic terminal knowhow
 
-"The journey of a thousand miles begins with a single step"
+*"The journey of a thousand miles begins with a single step"*
 
   -Lao Tzu

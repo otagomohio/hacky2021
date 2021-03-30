@@ -3,7 +3,6 @@ title = "Transferring Files"
 date = 2021-03-24T12:58:37+13:00
 draft = false
 weight = 5
-pre = "<b>1. </b>"
 +++
 
 

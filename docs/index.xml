@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Mar 2021 13:24:39 +1300</lastBuildDate><atom:link href="https://otagomohio.github.io/hacky2021/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Building blocks</title>
+      <link>https://otagomohio.github.io/hacky2021/concepts/building_blocks/</link>
+      <pubDate>Fri, 26 Mar 2021 14:36:57 +1300</pubDate>
+      
+      <guid>https://otagomohio.github.io/hacky2021/concepts/building_blocks/</guid>
+      <description>Most bioinformatic methods can be organised into a few basic concepts. I have organised these in terms of how the method influences the sequence files and how it modifies or what information is gathered from them. I use the term &amp;lsquo;sequence file&amp;rsquo; very broadly; it can encompass anything from raw reads to assembled contigs to scaffolds to whole organelle or chromosome assemblies. I have furthur divided these into two main classes: lower-level processes and higher-level processes.</description>
+    </item>
+    
+    <item>
       <title>Transferring Files</title>
       <link>https://otagomohio.github.io/hacky2021/basics/transferring_files/</link>
       <pubDate>Wed, 24 Mar 2021 12:58:37 +1300</pubDate>
