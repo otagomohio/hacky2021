@@ -14,3 +14,8 @@ hugo server -D
 
 and then copy the URL that is produced and paste it in a webpage
 
+## upload to github after adding and commiting (at least for now):
+
+git push -f 
+
+

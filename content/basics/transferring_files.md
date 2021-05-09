@@ -36,9 +36,7 @@ scp FILENAME mahuika:
 
 Transferring to a subfolder in your home folder on NeSI:
 
-```r
-library(tidyverse)
-a <- read.table('tablename')
+```bash
 scp FILENAME mahuika:scripts/
 ```
 
