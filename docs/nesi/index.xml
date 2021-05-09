@@ -7,5 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Mar 2021 16:24:07 +1300</lastBuildDate><atom:link href="https://otagomohio.github.io/hacky2021/nesi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NeSI Links</title>
+      <link>https://otagomohio.github.io/hacky2021/nesi/nesi_links/</link>
+      <pubDate>Wed, 24 Mar 2021 12:58:37 +1300</pubDate>
+      
+      <guid>https://otagomohio.github.io/hacky2021/nesi/nesi_links/</guid>
+      <description>The NeSI support page has good documentation for help in getting started and running many tools. This page has some of the most important links. The main page is here:
+NeSI support home page
+Initial set up This page provides guidelines for setting up your computer to access NeSI:
+Standard Terminal Setup
+Job scripts The biggest difference for doing analyses on NeSI versus your own computer is that you need to submit your analysis to a queue, so that the server can handle the demand.</description>
+    </item>
+    
+    <item>
+      <title>Collaboration on NeSI</title>
+      <link>https://otagomohio.github.io/hacky2021/nesi/collaboration_server/</link>
+      <pubDate>Wed, 24 Mar 2021 12:58:37 +1300</pubDate>
+      
+      <guid>https://otagomohio.github.io/hacky2021/nesi/collaboration_server/</guid>
+      <description>The Linux operating system was designed for multiple users, which makes it ideal for a server environment, and allows you to share your scripts and files with your colleagues. Here are some links and quick tips to getting your work going and letting others access your files.
+Quick tip: getting your script running Once you have written your script, in order to run it you have to make it executable. This is accomplished with one simple command:</description>
+    </item>
+    
   </channel>
 </rss>

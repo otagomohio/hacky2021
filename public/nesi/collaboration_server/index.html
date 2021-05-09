@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.81.0" />
+    <meta name="description" content="">
+<meta name="author" content="Hugh Cross">
+
+    <link rel="icon" href="/hacky2021/images/favicon.png" type="image/png">
+
+    <title>Collaboration on NeSI :: Hacky Hour 2021</title>
+
+    
+    <link href="/hacky2021/css/nucleus.css?1620604022" rel="stylesheet">
+    <link href="/hacky2021/css/fontawesome-all.min.css?1620604022" rel="stylesheet">
+    <link href="/hacky2021/css/hybrid.css?1620604022" rel="stylesheet">
+    <link href="/hacky2021/css/featherlight.min.css?1620604022" rel="stylesheet">
+    <link href="/hacky2021/css/perfect-scrollbar.min.css?1620604022" rel="stylesheet">
+    <link href="/hacky2021/css/auto-complete.css?1620604022" rel="stylesheet">
+    <link href="/hacky2021/css/atom-one-dark-reasonable.css?1620604022" rel="stylesheet">
+    <link href="/hacky2021/css/theme.css?1620604022" rel="stylesheet">
+    <link href="/hacky2021/css/tabs.css?1620604022" rel="stylesheet">
+    <link href="/hacky2021/css/hugo-theme.css?1620604022" rel="stylesheet">
+    
+    <link href="/hacky2021/css/theme-green.css?1620604022" rel="stylesheet">
+    
+    
+
+    <script src="/hacky2021/js/jquery-3.3.1.min.js?1620604022"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/hacky2021/nesi/collaboration_server/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <figure>
+  <img src='media/yellow_penguin.jpg' alt=' ' />
+  <figcaption><a href="https://otagomohio.github.io/hacky2021/"><font color="white" face="Garamond, sans-serif" size="+2">Hacky Hour 2021</font></a></figcaption>
+</figure>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/hacky2021/js/lunr.min.js?1620604022"></script>
+<script type="text/javascript" src="/hacky2021/js/auto-complete.js?1620604022"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/otagomohio.github.io\/hacky2021\/";
+    
+</script>
+<script type="text/javascript" src="/hacky2021/js/search.js?1620604022"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/" title="Basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/">
+          <i class="fas fa-wrench"></i> Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/transferring_files/" title="Transferring Files" class="dd-item ">
+        <a href="/hacky2021/basics/transferring_files/">
+        Transferring Files
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/tmux_basics/" title="Tmux basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/tmux_basics/">
+          Tmux basics
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/regular_expressions/" title="Regular expressions" class="dd-item ">
+        <a href="/hacky2021/basics/regular_expressions/">
+        Regular expressions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/shell_scripting_basics/" title="Shell scripting basics" class="dd-item ">
+        <a href="/hacky2021/basics/shell_scripting_basics/">
+        Shell scripting basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/nesi/" title="NeSI" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/hacky2021/nesi/">
+          <i class="fab fa-mixcloud"></i> NeSI
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/nesi_links/" title="NeSI Links" class="dd-item ">
+        <a href="/hacky2021/nesi/nesi_links/">
+        NeSI Links
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/collaboration_server/" title="Collaboration on NeSI" class="dd-item active">
+        <a href="/hacky2021/nesi/collaboration_server/">
+        Collaboration on NeSI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/bugs/" title="Debugging" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/bugs/">
+          <i class="fas fa-bug"></i> Debugging
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/troubleshooting/" title="Troubleshooting errors" class="dd-item ">
+        <a href="/hacky2021/bugs/troubleshooting/">
+        Troubleshooting errors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/getting_help/" title="Getting help" class="dd-item ">
+        <a href="/hacky2021/bugs/getting_help/">
+        Getting help
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/concepts/" title="Concepts" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/concepts/">
+          <i class="fas fa-yin-yang"></i> Concepts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/concepts/building_blocks/" title="Building blocks" class="dd-item ">
+        <a href="/hacky2021/concepts/building_blocks/">
+        Building blocks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/hacky2021/'>Hacky Hour 2021</a> > <a href='/hacky2021/nesi/'>NeSI</a> > Collaboration on NeSI
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#quick-tip-getting-your-script-running">Quick tip: getting your script running</a></li>
+        <li><a href="#making-your-script-available-system-wide">Making your script available system wide</a></li>
+        <li><a href="#sharing-files-and-folders-on-the-server">Sharing files and folders on the server</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Collaboration on NeSI
+            </h1>
+          
+
+        
+
+
+<p>The Linux operating system was designed for multiple users, which makes it ideal for a server environment, and allows you to share your scripts and files with your colleagues. Here are some links and quick tips to getting your work going and letting others access your files.</p>
+<h3 id="quick-tip-getting-your-script-running">Quick tip: getting your script running</h3>
+<p>Once you have written your script, in order to run it you have to make it <em>executable</em>. This is accomplished with one simple command:</p>
+<pre><code>chmod a+x
+</code></pre><p>To break down the above command: <code>chmod</code> means &lsquo;change mode&rsquo;, and is the main command to change permissions. The <code>a</code> refers to all: that you are giving permission for anyone to use this script; the <code>+</code> is to add a permission, and the <code>x</code> is to make the file executable.</p>
+<p>For a full explanation of all the permission symbols, see <a href="https://www.howtogeek.com/437958/how-to-use-the-chmod-command-on-linux/"><strong>this link</strong></a></p>
+<h3 id="making-your-script-available-system-wide">Making your script available system wide</h3>
+<p>Once you have your script, you can make it available so the computer can find it anywhere on the system. If you are submitting a job (slurm) script on NeSI, you can add something like the following to the slurm script:</p>
+<pre><code>export PATH='/nesi/project/uoo5555555/scripts/':$PATH
+</code></pre><p>The script should be able to then find the script and run it (don&rsquo;t forget to make it executable).</p>
+<h4 id="symbolic-links">Symbolic links</h4>
+<p>If you have a folder that is already in the Path (e.g. /usr/local/bin), you can add a <a href="https://www.shellhacks.com/symlink-create-symbolic-link-linux/"><strong>symbolic link</strong></a> that adds the script to the existing path:</p>
+<pre><code>ln -s /path/to/file /path/to/symlink
+</code></pre><h3 id="sharing-files-and-folders-on-the-server">Sharing files and folders on the server</h3>
+<p>If you are using NeSI, the server is set up so that anyone on the same project can share files and folders in that project directory. If you need to join a project, go to <a href="https://support.nesi.org.nz/hc/en-gb/articles/360000693896-Applying-to-join-a-NeSI-project"><strong>this link</strong></a> for instructions.</p>
+<p>On other servers, the defaults may be different, and you will have to change the permissions to add a user to one of your directories. A single command can allow everyone in your group access:</p>
+<pre><code>sudo chmod -R 775 /path/to/directory
+</code></pre><p>Now run <code>ls -l</code> to see the change in permissions</p>
+<p>The only issue is that future files that you create will assign the group to the default for your user account. There are two steps to keep all files written in this directory assigned to the group:</p>
+<pre><code>umask 0002
+
+sudo chmod g+s /path/to/directory
+</code></pre><p>The <code>umask</code> command is explained in detail <a href="https://www.computerhope.com/unix/uumask.htm"><strong>here</strong></a> and <a href="https://linuxize.com/post/umask-command-in-linux/"><strong>here</strong></a>, and the special permissions command (<code>chmod g+s</code>) is explained <a href="https://linuxconfig.org/how-to-use-special-permissions-the-setuid-setgid-and-sticky-bits"><strong>here</strong></a>.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/hacky2021/nesi/nesi_links/" title="NeSI Links"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/hacky2021/bugs/" title="Debugging" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/hacky2021/js/clipboard.min.js?1620604022"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.min.js?1620604022"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.jquery.min.js?1620604022"></script>
+    <script src="/hacky2021/js/jquery.sticky.js?1620604022"></script>
+    <script src="/hacky2021/js/featherlight.min.js?1620604022"></script>
+    <script src="/hacky2021/js/highlight.pack.js?1620604022"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/hacky2021/js/modernizr.custom-3.6.0.js?1620604022"></script>
+    <script src="/hacky2021/js/learn.js?1620604022"></script>
+    <script src="/hacky2021/js/hugo-learn.js?1620604022"></script>
+    
+        
+            <script src="/hacky2021/mermaid/mermaid.js?1620604022"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

@@ -22,4 +22,4 @@ disableToc = "true"
 
 [markup.goldmark.renderer]
     unsafe=true
-    
+

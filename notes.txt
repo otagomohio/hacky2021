@@ -1,4 +1,16 @@
 
+# to render the html for content:
+
+hugo 
+
+
 ## to sync the docs folder for publishing to GitHub Pages 
 
 rsync -av --delete public/ docs 
+
+## to preview in command line 
+
+hugo server -D
+
+and then copy the URL that is produced and paste it in a webpage
+

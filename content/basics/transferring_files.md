@@ -6,7 +6,7 @@ weight = 5
 +++
 
 
-Following are some example commands for transferring files and folders to and from the server. 
+Following are some example commands for transferring files and folders to and from the server. [**The NeSI support page**](https://support.nesi.org.nz/hc/en-gb/articles/360000578455-Moving-files-to-and-from-the-cluster) also has good instructions.
 
 Remember:
 
