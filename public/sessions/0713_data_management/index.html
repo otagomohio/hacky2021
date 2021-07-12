@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/hacky2021/images/favicon.png" type="image/png">
 
-    <title>Regular expressions :: Hacky Hour 2021</title>
+    <title>Data management :: Hacky Hour 2021</title>
 
     
     <link href="/hacky2021/css/nucleus.css?1626131305" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/hacky2021/basics/regular_expressions/">
+  <body class="" data-url="/hacky2021/sessions/0713_data_management/">
     <nav id="sidebar" class="">
 
 
@@ -83,7 +83,7 @@
   
     
     <li data-nav-id="/hacky2021/basics/" title="Basics" class="dd-item
-        parent
+        
         
         
         ">
@@ -158,7 +158,7 @@
  
   
     
-      <li data-nav-id="/hacky2021/basics/regular_expressions/" title="Regular expressions" class="dd-item active">
+      <li data-nav-id="/hacky2021/basics/regular_expressions/" title="Regular expressions" class="dd-item ">
         <a href="/hacky2021/basics/regular_expressions/">
         Regular expressions
         
@@ -284,7 +284,7 @@
   
     
     <li data-nav-id="/hacky2021/sessions/" title="Sessions" class="dd-item
-        
+        parent
         
         
         ">
@@ -310,7 +310,7 @@
  
   
     
-      <li data-nav-id="/hacky2021/sessions/0713_data_management/" title="Data management" class="dd-item ">
+      <li data-nav-id="/hacky2021/sessions/0713_data_management/" title="Data management" class="dd-item active">
         <a href="/hacky2021/sessions/0713_data_management/">
         Data management
         
@@ -509,7 +509,7 @@
             
           
           
-            <a href='/hacky2021/'>Hacky Hour 2021</a> > <a href='/hacky2021/basics/'>Basics</a> > Regular expressions
+            <a href='/hacky2021/'>Hacky Hour 2021</a> > <a href='/hacky2021/sessions/'>Sessions</a> > Data management
           
         
           
@@ -526,11 +526,12 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#tutorials-and-cheatsheets">Tutorials and Cheatsheets</a></li>
-        <li><a href="#grep-find-anything">grep: find anything</a></li>
-        <li><a href="#links-for-other-languages">Links for other languages</a></li>
+        <li><a href="#description">Description</a></li>
       </ul>
     </li>
+    <li><a href="#good-habits">Good habits</a></li>
+    <li><a href="#tips-and-tricks-for-data-management-on-nesi">Tips and tricks for data management on NeSI</a></li>
+    <li><a href="#links">Links</a></li>
   </ul>
 </nav>
     </div>
@@ -548,37 +549,61 @@
           
             <h1>
               
-              Regular expressions
+              Data management
             </h1>
           
 
         
 
 
-<p>For bioinformatics, it is critical to know how to use at least the basics of regular expressions (regex). There are regex that you use all the time, but most of us will look them up more often than not. Following are some links to online tutorials and cheatsheets to guide you the next time you need to use them (it will probably be sooner than you think!</p>
-<h3 id="tutorials-and-cheatsheets">Tutorials and Cheatsheets</h3>
-<p><a href="https://www.rexegg.com/"><strong>RexEgg Tutorial</strong></a></p>
-<p><a href="https://www.rexegg.com/regex-quickstart.html"><strong>RexEgg Cheat Sheets</strong></a></p>
-<p><a href="https://regexone.com/lesson/introduction_abcs"><strong>RegexOne: an interactive tutorial</strong></a></p>
-<p><a href="https://www.regular-expressions.info/"><strong>Regular-Expressions.info</strong></a>. The name says it all! Also has links for grep and other languages (see below).</p>
-<p><a href="https://ryanstutorials.net/regular-expressions-tutorial/"><strong>Ryans Tutorials</strong></a></p>
-<p><a href="https://www.petefreitag.com/cheatsheets/regex/"><strong>A very basic regex cheatsheet</strong></a></p>
-<p><a href="https://www.cheatography.com/davechild/cheat-sheets/regular-expressions/"><strong>A more thorough cheatsheet</strong></a></p>
-<h3 id="grep-find-anything">grep: find anything</h3>
-<p>the command line program <strong>grep</strong>, which stands for <em>global regular expression print</em>, can search files and folders for patterns, which includes regular expressions.</p>
-<p><a href="https://www.regular-expressions.info/"><strong>Regex.info site</strong></a></p>
-<p><a href="https://www.cyberciti.biz/faq/grep-regular-expressions/"><strong>Using regular expressions in grep</strong></a></p>
-<p><a href="https://www.ostechnix.com/the-grep-command-tutorial-with-examples-for-beginners/"><strong>grep tutorial</strong></a></p>
-<p><a href="https://ryanstutorials.net/linuxtutorial/grep.php"><strong>Ryans Tutorial on grep and regex</strong></a></p>
-<p><a href="https://phoenixnap.com/kb/grep-command-linux-unix-examples"><strong>Intro to grep</strong></a></p>
-<h3 id="links-for-other-languages">Links for other languages</h3>
-<p><a href="https://www.rexegg.com/regex-python.html"><strong>RexEgg for Python</strong></a></p>
-<p><a href="https://www.regular-expressions.info/python.html"><strong>regex.info for Python</strong></a></p>
-<p><a href="https://www.debuggex.com/cheatsheet/regex/python"><strong>regex for Python cheatsheet</strong></a></p>
-<p><a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/regex.html"><strong>R documentation for regex</strong></a></p>
-<p><a href="https://www.regular-expressions.info/rlanguage.html"><strong>A fairly comprehensive regex primer for the R language</strong></a></p>
-<p><a href="https://rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf"><strong>RStudio.com regex cheatsheet (pdf)</strong></a></p>
-<p>For R tidyverse users, <a href="https://r4ds.had.co.nz/strings.html"><strong>here is a link to <em>R for Data Science chapter</em> section on regex</strong></a>, and <a href="https://stringr.tidyverse.org/articles/regular-expressions.html"><strong>here is the stringr package regex page</strong></a>.</p>
+<p>Ludovic Dutoit, July 2021</p>
+<h3 id="description">Description</h3>
+<p>This session covers the essential of data management for a project on NeSI. It starts with a bit of general thinking before moving into some <a href="https://www.nesi.org.nz/">NeSI</a> specifics.</p>
+<h2 id="good-habits">Good habits</h2>
+<ul>
+<li>Always have your data in at least two places.</li>
+<li>Never edit your raw data.</li>
+<li>Use informative file names: <code>filtered_data.txt</code>is meaningless on its own. <code>data_noMISSINGDATAremoved12lowqual.csv</code> is much better.</li>
+<li>Avoid proprietary formats</li>
+<li>Have a readme file</li>
+<li>Your methods are easily transportable, and should bring anyone from raw data to results. Put your efforts there, Try to see files as checkpoints, not at the center of your structure.</li>
+<li>Use version control (i.e. github.com)</li>
+</ul>
+<h2 id="tips-and-tricks-for-data-management-on-nesi">Tips and tricks for data management on NeSI</h2>
+<p>If you do not have access to NeSI yet, apply <a href="https://www.nesi.org.nz/">here</a>. Free, powerful, and maintained for you!</p>
+<p>There are essentially 3 file systems on NeSI.</p>
+<p>They are explained <a href="https://support.nesi.org.nz/hc/en-gb/articles/360000177256-NeSI-File-Systems-and-Quotas">here</a>.</p>
+<p><strong>How to check your usage?</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">nn_storage_quota <span style="color:#75715e"># check your quotas, specific to NeSI</span>
+du -h <span style="color:#75715e"># Show the size of every directory in the data structure.</span>
+du -h | grep -E <span style="color:#e6db74">&#34;^[0-9]+G&#34;</span> <span style="color:#75715e"># check all the directories in the Gb range</span>
+</code></pre></div><p>That is all good and well, but we sometimes end up with huge quantity of small files, can we have an infinity of those? No, files are assiocated to metadata, an empty file still takes some space for metadata on the system. That space is referred to as <strong>inodes</strong>, and they can also reach a quota.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">nn_storage_quota
+echo <span style="color:#e6db74">&#34;Inode usage for </span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> ; <span style="color:#66d9ef">for</span> d in <span style="color:#e6db74">`</span>find -maxdepth <span style="color:#ae81ff">1</span> -type d | cut -d<span style="color:#ae81ff">\/</span> -f2 | grep -xv . | sort<span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span> c<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find $d | wc -l<span style="color:#66d9ef">)</span> ; printf <span style="color:#e6db74">&#34;</span>$c<span style="color:#e6db74">\t\t- </span>$d<span style="color:#e6db74">\n&#34;</span> ; <span style="color:#66d9ef">done</span> ; printf <span style="color:#e6db74">&#34;Total: \t\t</span><span style="color:#66d9ef">$(</span>find <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span> | wc -l<span style="color:#66d9ef">)</span><span style="color:#e6db74">\n&#34;</span> <span style="color:#75715e"># This counts the inodes</span>
+</code></pre></div><p><strong>Where are those backups anyway?</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd  <span style="color:#75715e"># Brings you home</span>
+cd .snapshots
+ls -lh 
+</code></pre></div><p>You got one week of backups there. Whether it is that exact folder or its content.</p>
+<p>Same inside the <code>/nesi/project/</code> but not in &lsquo;nobackup&rsquo;</p>
+<h2 id="links">Links</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd /nesi/nobackup/uooXXXXX <span style="color:#75715e"># go to your nobackup directory</span>
+mkdir tmp_data
+touch sample<span style="color:#f92672">{</span>0001..1000<span style="color:#f92672">}</span>.fastq
+</code></pre></div><p>Wow, we have a 1000 files here. You&rsquo;d like to use them from your nobackup inside your normal project</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd  /nesi/project/uooXXXXX <span style="color:#75715e"># go to your  project directory</span>
+</code></pre></div><p>Let&rsquo;s create a link:</p>
+<pre><code>ln -s  /nesi/nobackup/uooXXXXX/tmp_data/ . # create a soft link here. &quot;.&quot; is for here
+</code></pre><p>Have a look inside:</p>
+<pre><code>ld -lh
+ls -lh tmp_data/
+</code></pre><p>Yay it is all here, we basically created a shortcut without duplicating the files.</p>
+<p>Let&rsquo;s remove it now:</p>
+<pre><code>rm -r  tmp_data/ # -r is needed to remove a directory
+</code></pre><p>Is the original folder still there?</p>
+<pre><code>ls -lh  /nesi/nobackup/uooXXXXX/tmp_data/
+</code></pre><p>YES!</p>
+<p>Still not enough space? Ask <a href="support@nesi.org.nz">support@nesi.org.nz</a> first, if it is not enough, you can get data on the <a href="https://www.otago.ac.nz/its/services/hosting/otago068353.html">high capacity storage (HCS)</a> of the university too.</p>
 
 
 <footer class="footline">
@@ -616,6 +641,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -632,8 +659,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -666,26 +706,6 @@
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -754,6 +774,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -766,6 +787,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -785,6 +807,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -870,10 +895,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/hacky2021/basics/tmux_basics/" title="Tmux basics"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/hacky2021/sessions/" title="Sessions"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/hacky2021/basics/shell_scripting_basics/" title="Shell scripting basics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/hacky2021/bugs/" title="Debugging" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
