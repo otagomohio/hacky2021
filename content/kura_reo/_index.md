@@ -9,7 +9,10 @@ pre = '<i class="fas fa-fire"></i> '
 
 # *Kura Reo* 
 
-(Language School)
 
 
 
+"*Poipoia te kakano kia puawai*"
+
+
+("*Nurture the seed and it will blossom*")
