@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kura reo on Hacky Hour 2021</title>
+    <link>https://otagomohio.github.io/hacky2021/kura_reo/</link>
+    <description>Recent content in kura reo on Hacky Hour 2021</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Mar 2021 13:24:25 +1300</lastBuildDate><atom:link href="https://otagomohio.github.io/hacky2021/kura_reo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maori Bioinformatic Phrases</title>
+      <link>https://otagomohio.github.io/hacky2021/kura_reo/maori_informatics/</link>
+      <pubDate>Fri, 26 Mar 2021 14:36:57 +1300</pubDate>
+      
+      <guid>https://otagomohio.github.io/hacky2021/kura_reo/maori_informatics/</guid>
+      <description>Following are bioinformatic-related phrases in Maori. Check the Maori Dictionary to look up more.
+rorohiko
+{roro: brain + hiko: flash, electronic}</description>
+    </item>
+    
+  </channel>
+</rss>

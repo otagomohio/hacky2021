@@ -14,6 +14,13 @@
 	"content": "Most bioinformatic methods can be organised into a few basic concepts. I have organised these in terms of how the method influences the sequence files and how it modifies or what information is gathered from them. I use the term \u0026lsquo;sequence file\u0026rsquo; very broadly; it can encompass anything from raw reads to assembled contigs to scaffolds to whole organelle or chromosome assemblies. I have furthur divided these into two main classes: lower-level processes and higher-level processes. These are explained in detail below.\nLower-level building blocks I identify three major types of lower-level processes:\n Pattern searching \u0026ndash; finding patterns within a sequence Mapping \u0026ndash; pairwise alignment of a sequence against a database Clustering \u0026ndash; group together a collection of sequences based on identity  Each of these process types can encompass or be a part of many programs, and be applied to multiple sequence types\u0026ndash;as outlined above. Pattern searching is typical of early steps in most processing of raw reads, and includes adapter and primer removal, as well as quality filtering. However, it also is involved in many downstream processing steps, including searching for coding regions or CG islands on assembled contigs, or repeats across whole genome assemblies. Note that often these searches are looking for patterns based on existing references, such as adapter sequence files or repeat databases, but they can also involve looking for patterns not neccesarily dependent on any external reference, such as start and stop codons along a contig.\nFor Mapping processes, these involve searching whole sequences against some kind of reference database. As with Pattern searching, these can involve a BLAST search of short reads or assembled contigs or aligning RNA reads to a transcriptome. Kraken, HMM\nThese first two processes may seem like the same thing, and indeed they are more or less two sides of the same coin. But because they are usually very separate in pipelines I am keeping them distinct. I distinguish them by what is the subject and what is the object of the search: generally Pattern searching is looking for elements of a database somewhere along a sequence (database is subject, sequence is object), wherease Mapping is searching in a database for whole sequence reads (sequence is subject, database is object). Though for many searches, especially local alignments, matches to only part of the sequence may be found, it is usually the whole sequence that is the search query. Because of the nature of both of these (especially where pattern searching is looking for shorter and often, fragmentary patterns), generally the algorithms used for both are different.\nThe third type, Clustering, involves grouping or clustering a collection of sequences based on similarity. It is only comparing within a group of sequences, and does not generally involve any external references (of course, there are many hybrid clustering approaches that combine mapping and clustering, but often these happen in turn). Clustering methods are found across many bioinformatic pipelines and include kmer counting, OTU clustering (in metabarcoding), and dereplication. I include genome assembly here, though genome assemblies usually involve a wide range of steps, but building larger contigs from alignments of kmers is one of the core approaches. I also include multiple sequence alignment (MSA) here; while it is an alignment method, it is distinct from the Mapping alignment methods described above, as those generally involve pairwise comparisons\u0026ndash;aligning a single query separately to each of many subjects in a database. While a MSA is generated from the simultaneous alignment of multiple sequences\u0026ndash;at heart it is a very different approach.\nHere is a summary table that includes some examples of each method:\n   Pattern searching Mapping Clustering     finding patterns within a sequence pairwise alignment of a sequence against a database group together a collection of sequences based on identity   adapter/primer removal align reads to genome kmer counting   gene prediction BLAST search genome assembly   motif searching HMM search for protein domains dereplication   repeat finder create OTU table multiple sequence alignment         Next level: higher order processes From the basic processes, there are higher level methods that make statistical inferences about the results of the lower-level building blocks. For example, a phylogenetic analysis will try to infer relationships among samples in a multiple sequence alignment. Likewise, a principal component analysis (PCA) is often used to determine relationships among Operational Taxonomic Units (OTUs) resulting from a clustering analysis, such as USEARCH. I also include variant calling algorithms, such as GATK Haplotype Caller and FreeBayes, in this category, as they make inferences about statistically robust Single Nucleotide Polymorphisms (SNPs) and other variants resulting from mapping reads to a genome or transcriptome.\n"
 },
 {
+	"uri": "https://otagomohio.github.io/hacky2021/kura_reo/maori_informatics/",
+	"title": "Maori Bioinformatic Phrases",
+	"tags": [],
+	"description": "",
+	"content": "Following are bioinformatic-related phrases in Maori. Check the Maori Dictionary to look up more.\nrorohiko\n{roro: brain + hiko: flash, electronic}\n"
+},
+{
 	"uri": "https://otagomohio.github.io/hacky2021/sessions/0713_data_management/",
 	"title": "Data management",
 	"tags": [],
@@ -49,18 +56,18 @@
 	"content": "basic terminal knowhow \u0026ldquo;The journey of a thousand miles begins with a single step\u0026rdquo;\n-Lao Tzu\n"
 },
 {
-	"uri": "https://otagomohio.github.io/hacky2021/nesi/",
-	"title": "NeSI",
-	"tags": [],
-	"description": "",
-	"content": "Using the NeSI server \u0026ldquo;That is the exploration that awaits you!\nNot mapping stars and studying nebula,\nbut charting the unknown possibilities of existence.\u0026quot;\n-Leonard Nimoy\n"
-},
-{
 	"uri": "https://otagomohio.github.io/hacky2021/sessions/",
 	"title": "Sessions",
 	"tags": [],
 	"description": "",
 	"content": "Help Sessions \u0026ldquo;All paths lead to the same goal: to convey to others what we are\u0026rdquo;\n-Pablo Neruda\n"
+},
+{
+	"uri": "https://otagomohio.github.io/hacky2021/nesi/",
+	"title": "NeSI",
+	"tags": [],
+	"description": "",
+	"content": "Using the NeSI server \u0026ldquo;That is the exploration that awaits you!\nNot mapping stars and studying nebula,\nbut charting the unknown possibilities of existence.\u0026quot;\n-Leonard Nimoy\n"
 },
 {
 	"uri": "https://otagomohio.github.io/hacky2021/bugs/",
@@ -96,6 +103,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Basic concepts of bioinformatics \u0026ldquo;Let\u0026rsquo;s be straight here. If we find something we can\u0026rsquo;t understand we like to call it something you can\u0026rsquo;t understand, or indeed pronounce\u0026rdquo;\n-Douglas Adams\n"
+},
+{
+	"uri": "https://otagomohio.github.io/hacky2021/kura_reo/",
+	"title": "kura reo",
+	"tags": [],
+	"description": "",
+	"content": "Kura Reo (Language School)\n"
 },
 {
 	"uri": "https://otagomohio.github.io/hacky2021/basics/regular_expressions/",
