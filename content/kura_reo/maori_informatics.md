@@ -8,7 +8,7 @@ weight: 5
 Following are bioinformatic-related phrases in Ma<span>&#772;</span>ori. Check the [**Ma<span>&#772;</span>ori Dictionary**](https://maoridictionary.co.nz/) to look up more.
 
 
-*rorohiko* 
+*rorohiko*: computer
 
 { *roro*: brain + *hiko*: flash, electronic }
 
