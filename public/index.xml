@@ -74,6 +74,17 @@ Remember:
     </item>
     
     <item>
+      <title>Text Editor Hacks</title>
+      <link>https://otagomohio.github.io/hacky2021/sessions/0810_vscode_tricks/</link>
+      <pubDate>Tue, 10 Aug 2021 00:00:00 +1200</pubDate>
+      
+      <guid>https://otagomohio.github.io/hacky2021/sessions/0810_vscode_tricks/</guid>
+      <description>Presented by Hugh Cross
+Getting more out of your text editor This session will highlight a couple of ways to utilise your text editor in ways you may not have thought possible. We will use the popular text editor Visual Studio Code (VS Code) for this session, but the tools we show you today are available in some fashion on other text editors, including Sublime Text and Atom.
+Installing VS Code Extensions When you open Visual Studio Code there are several tabs on the side that will expand to show different options.</description>
+    </item>
+    
+    <item>
       <title>Collaboration on NeSI</title>
       <link>https://otagomohio.github.io/hacky2021/nesi/collaboration_server/</link>
       <pubDate>Wed, 24 Mar 2021 12:58:37 +1300</pubDate>

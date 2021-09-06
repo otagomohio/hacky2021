@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.81.0" />
+    <meta name="description" content="">
+<meta name="author" content="Hugh Cross">
+
+    <link rel="icon" href="/hacky2021/images/favicon.png" type="image/png">
+
+    <title>Text Editor Hacks :: Hacky Hour 2021</title>
+
+    
+    <link href="/hacky2021/css/nucleus.css?1630906770" rel="stylesheet">
+    <link href="/hacky2021/css/fontawesome-all.min.css?1630906770" rel="stylesheet">
+    <link href="/hacky2021/css/hybrid.css?1630906770" rel="stylesheet">
+    <link href="/hacky2021/css/featherlight.min.css?1630906770" rel="stylesheet">
+    <link href="/hacky2021/css/perfect-scrollbar.min.css?1630906770" rel="stylesheet">
+    <link href="/hacky2021/css/auto-complete.css?1630906770" rel="stylesheet">
+    <link href="/hacky2021/css/atom-one-dark-reasonable.css?1630906770" rel="stylesheet">
+    <link href="/hacky2021/css/theme.css?1630906770" rel="stylesheet">
+    <link href="/hacky2021/css/tabs.css?1630906770" rel="stylesheet">
+    <link href="/hacky2021/css/hugo-theme.css?1630906770" rel="stylesheet">
+    
+    <link href="/hacky2021/css/theme-green.css?1630906770" rel="stylesheet">
+    
+    
+
+    <script src="/hacky2021/js/jquery-3.3.1.min.js?1630906770"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/hacky2021/sessions/0810_vscode_tricks/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <figure>
+  <img src='media/yellow_penguin.jpg' alt=' ' />
+  <figcaption><a href="https://otagomohio.github.io/hacky2021/"><font color="white" face="Garamond, sans-serif" size="+2">Hacky Hour 2021</font></a></figcaption>
+</figure>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/hacky2021/js/lunr.min.js?1630906770"></script>
+<script type="text/javascript" src="/hacky2021/js/auto-complete.js?1630906770"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/otagomohio.github.io\/hacky2021\/";
+    
+</script>
+<script type="text/javascript" src="/hacky2021/js/search.js?1630906770"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/" title="Basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/">
+          <i class="fas fa-wrench"></i> Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/transferring_files/" title="Transferring Files" class="dd-item ">
+        <a href="/hacky2021/basics/transferring_files/">
+        Transferring Files
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/tmux_basics/" title="Tmux basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/tmux_basics/">
+          Tmux basics
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/regular_expressions/" title="Regular expressions" class="dd-item ">
+        <a href="/hacky2021/basics/regular_expressions/">
+        Regular expressions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/shell_scripting_basics/" title="Shell scripting basics" class="dd-item ">
+        <a href="/hacky2021/basics/shell_scripting_basics/">
+        Shell scripting basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/sessions/" title="Sessions" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/hacky2021/sessions/">
+          <i class="fas fa-users"></i> Sessions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0713_data_management/" title="Data management" class="dd-item ">
+        <a href="/hacky2021/sessions/0713_data_management/">
+        Data management
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0810_vscode_tricks/" title="Text Editor Hacks" class="dd-item active">
+        <a href="/hacky2021/sessions/0810_vscode_tricks/">
+        Text Editor Hacks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/nesi/" title="NeSI" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/nesi/">
+          <i class="fab fa-mixcloud"></i> NeSI
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/nesi_links/" title="NeSI Links" class="dd-item ">
+        <a href="/hacky2021/nesi/nesi_links/">
+        NeSI Links
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/collaboration_server/" title="Collaboration on NeSI" class="dd-item ">
+        <a href="/hacky2021/nesi/collaboration_server/">
+        Collaboration on NeSI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/bugs/" title="Debugging" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/bugs/">
+          <i class="fas fa-bug"></i> Debugging
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/troubleshooting/" title="Troubleshooting errors" class="dd-item ">
+        <a href="/hacky2021/bugs/troubleshooting/">
+        Troubleshooting errors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/getting_help/" title="Getting help" class="dd-item ">
+        <a href="/hacky2021/bugs/getting_help/">
+        Getting help
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/concepts/" title="Concepts" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/concepts/">
+          <i class="fas fa-yin-yang"></i> Concepts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/concepts/building_blocks/" title="Building blocks" class="dd-item ">
+        <a href="/hacky2021/concepts/building_blocks/">
+        Building blocks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/kura_reo/" title="Kura Reo" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/kura_reo/">
+          <i class="fas fa-fire"></i> Kura Reo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/kura_reo/maori_informatics/" title="Maori Bioinformatic Phrases" class="dd-item ">
+        <a href="/hacky2021/kura_reo/maori_informatics/">
+        Maori Bioinformatic Phrases
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/hacky2021/'>Hacky Hour 2021</a> > <a href='/hacky2021/sessions/'>Sessions</a> > Text Editor Hacks
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#getting-more-out-of-your-text-editor">Getting more out of your text editor</a>
+      <ul>
+        <li><a href="#installing-vs-code-extensions">Installing VS Code Extensions</a></li>
+        <li><a href="#editing-files-on-the-server-with-vs-code">Editing files on the server with VS Code</a></li>
+        <li><a href="#working-remotely-with-vs-code">Working remotely with VS Code,</a></li>
+        <li><a href="#using-sendtoterminal-to-document-your-work">Using SendToTerminal+ to document your work</a></li>
+        <li><a href="#acknowledgements">Acknowledgements</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Text Editor Hacks
+            </h1>
+          
+
+        
+
+
+<p>Presented by Hugh Cross</p>
+<h2 id="getting-more-out-of-your-text-editor">Getting more out of your text editor</h2>
+<p>This session will highlight a couple of ways to utilise your text editor in ways you may not have thought possible. We will use the popular text editor <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer"><b>Visual Studio Code</b></a> (VS Code) for this session, but the tools we show you today are available in some fashion on other text editors, including  <a href="https://atom.io/" target="_blank" rel="noopener noreferrer"><b>Sublime Text</b></a> and <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer"><b>Atom</b></a>.</p>
+<h3 id="installing-vs-code-extensions">Installing VS Code Extensions</h3>
+<p>When you open Visual Studio Code there are several tabs on the side that will expand to show different options. There are hundreds of tools available for VS Code, and these can be accessed by clicking on the <strong>Extensions</strong> tab:</p>
+<p><img src="../sessions_images/vscode_sessionSlide1.png" alt="extensions"></p>
+<p>When the tab opens, type the extension you are looking for in the Search box at the top. Extensions you already have installed will be listed there. The first extension we are going to load is called <em><strong>Remote - SSH</strong></em>. Type that in the search box and then select this one from the search results. A description and details of the extension will appear. Click on <em>Install</em> at the top of the extension description to install it (in the image, it says <em>Uninstall</em> as this had already been loaded on my VS Code).</p>
+<p>The next extension we will need for today is <em><strong>SendToTerminal+</strong></em>. Search and install this extension the same way:</p>
+<p><img src="../sessions_images/vscode_sessionSlide2.png" alt="sendToTerminal"></p>
+<p>You can look for other extensions as well, including color themes that do not come with the standard install. You can also explore extensions you may want on the webpage.</p>
+<h3 id="editing-files-on-the-server-with-vs-code">Editing files on the server with VS Code</h3>
+<p>The <em><strong>Remote - SSH</strong></em> extension allows you to open and edit files on NeSI or another remote server that you have access to. If you are not used to terminal text editors like <strong>Nano</strong> or <strong>Vim</strong>, this will help you get going on NeSI (though those text editiors are still useful tools to know). In order to use this tool, your computer will already need to be set up to log in to NeSI; this includes having a config file setup in your .ssh folder as per the instructions on the [****] <a href="https://support.nesi.org.nz/hc/en-gb/articles/360000625535-Standard-Terminal-Setup" target="_blank" rel="noopener noreferrer"><b>NeSI webpage</b></a>. Once your computer is set up, you can log an open window of VS Code to NeSI. First, click on the new tab on the side, which is the Remote Explorer:</p>
+<p><img src="../sessions_images/vscode_sessionSlide3.png" alt="remoteExplorer"></p>
+<p>Then, right click on mahuika (or whatever server you are accessing) in the panel that opens. Select either <code>Connect to Host in Current Window</code> or <code>Connect to Host in New Window</code>. If you are not already logged in to NeSI on a terminal, you will be prompted to enter password and security code [<strong>HINT</strong>: It is strongly recommended to log in with a terminal before logging in with VS Code; I found it timed me out often from VS Code, but if you are already logged in with a terminal, VS Code will skip the authentication.].</p>
+<h3 id="working-remotely-with-vs-code">Working remotely with VS Code,</h3>
+<p>You will see the status at the bottom of the VS Code window tell you when you are logged in to a remote server. Once you are in, you can then open a folder anywhere you have access to on the server. Click on the folder <em>Explorer</em> tab on the top and then click on &lsquo;Open Folder&rsquo;. A text entry box will appear, and you can enter the path to the folder you want to open:</p>
+<p><img src="../sessions_images/vscode_sessionSlide4.png" alt="folderExplorer"></p>
+<p>Once on, you will see all the files and subfolders on the left-hand side of the window. You can click on most text files to open and edit them:</p>
+<p><img src="../sessions_images/vscode_sessionSlide5.png" alt="openFile"></p>
+<p>This will enable you to edit job scripts, or other files. You can even open some PDF and other image files, but this capacity is limited for now.</p>
+<h3 id="using-sendtoterminal-to-document-your-work">Using SendToTerminal+ to document your work</h3>
+<p>Now we will employ the other extension we installed. First, we need a terminal. VS Code comes with built-in terminals. Click on Terminal &gt; New Terminal, from the main menu, and a new terminal will open within the window. If the window is logged on to NeSI, then the terminal will automatically be on NeSI. (You can of course, open windows offline in other windows as well.)</p>
+<p>The terminal should open up in the same folder as you opened in Explorer above. Now, you can create a new text file by right-clicking on the folder where you want the file to be and select New File, or with the keyboard shortcut Cmd + n. In the text file, try typing a bash command, like <code>pwd</code>, on a line. Then, with the cursor on that line, hold down the option and shift keys and then hit enter. The command should appear on the terminal below, with the output just below, as if you had typed it in the terminal itself:</p>
+<p><img src="../sessions_images/vscode_sessionSlide6.png" alt="sendTextPwd"></p>
+<p>I use this extension to document my work as I go. Instead of entering the commands directly on the terminal, and then forgetting exactly what I did later, this way you will document what you are doing and can refer to it later. You can add comments to the commands (&lsquo;this didn&rsquo;t this work&rsquo;, &lsquo;oh crap, why won&rsquo;t this work&rsquo;, etc). You can also select multiple lines on the text file, like for running a <code>for</code> loop, and enter all the lines as one command.</p>
+<p>The SendToTerminal+ extension will work on Python and R as well. You can load the R module, enter <code>R</code>, and then send R commands to the console, in much the same way you would on RStudio. I found graphics did not work quite as well; there is some limited support to visualise the graphics, but it is better to do this with RStudio, or JupyterHub if you are on NeSI. However, if you want to run a few lines of R to fix a table or run some stats, it works.</p>
+<p>For Python, load a Python module, and then in the terminal enter python or ipython for enhanced capability. Now you can send python code to the terminal to run. Again, JupyterHub would be much better for running Python code on NeSI, but sometimes I need to just run a few lines of Python to fix a file or something, and this way, the entire session&ndash;with bash, R, and Python&ndash;can be in a single document.</p>
+<p>Of course, SendToTerminal+ works great for regular VS Code on your own computer, or you can even log in to NeSI just with the terminal (just enter <code>ssh mahuika</code>) and keep the VS Code and the text file documentation on your computer.</p>
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Thanks to Dinindu Senanayake at NeSI for showing me the Remote - SSH extension</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/hacky2021/sessions/0713_data_management/" title="Data management"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/hacky2021/nesi/" title="NeSI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/hacky2021/js/clipboard.min.js?1630906770"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.min.js?1630906770"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.jquery.min.js?1630906770"></script>
+    <script src="/hacky2021/js/jquery.sticky.js?1630906770"></script>
+    <script src="/hacky2021/js/featherlight.min.js?1630906770"></script>
+    <script src="/hacky2021/js/highlight.pack.js?1630906770"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/hacky2021/js/modernizr.custom-3.6.0.js?1630906770"></script>
+    <script src="/hacky2021/js/learn.js?1630906770"></script>
+    <script src="/hacky2021/js/hugo-learn.js?1630906770"></script>
+    
+        
+            <script src="/hacky2021/mermaid/mermaid.js?1630906770"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

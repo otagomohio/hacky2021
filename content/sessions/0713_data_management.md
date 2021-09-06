@@ -9,7 +9,7 @@ Ludovic Dutoit, July 2021
 
 ### Description
 
-This session covers the essential of data management for a project on NeSI. It starts with a bit of general thinking before moving into some [NeSI](https://www.nesi.org.nz/) specifics. 
+This session covers the essential of data management for a project on NeSI. It starts with a bit of general thinking before moving into some <a href="https://www.nesi.org.nz/" target="_blank" rel="noopener noreferrer"><b>NeSI</b></a> specifics. 
 
 
 ## Good habits
@@ -25,12 +25,12 @@ This session covers the essential of data management for a project on NeSI. It s
 ## Tips and tricks for data management on NeSI
 
 
-If you do not have access to NeSI yet, apply [here](https://www.nesi.org.nz/). Free, powerful, and maintained for you!
+If you do not have access to NeSI yet, apply <a href="https://www.nesi.org.nz/" target="_blank" rel="noopener noreferrer"><b>here</b></a>. Free, powerful, and maintained for you!
 
 
 There are essentially 3 file systems on NeSI.
 
-They are explained [here](https://support.nesi.org.nz/hc/en-gb/articles/360000177256-NeSI-File-Systems-and-Quotas).
+They are explained <a href="https://support.nesi.org.nz/hc/en-gb/articles/360000177256-NeSI-File-Systems-and-Quotas" target="_blank" rel="noopener noreferrer"><b>here</b></a>.
 
 
 **How to check your usage?**
@@ -106,4 +106,4 @@ ls -lh  /nesi/nobackup/uooXXXXX/tmp_data/
 YES!
 
 
-Still not enough space? Ask [support@nesi.org.nz](support@nesi.org.nz) first, if it is not enough, you can get data on the [high capacity storage (HCS)](https://www.otago.ac.nz/its/services/hosting/otago068353.html) of the university too.
+Still not enough space? Ask <support@nesi.org.nz> first, if it is not enough, you can get data on the []() <a href="https://www.otago.ac.nz/its/services/hosting/otago068353.html" target="_blank" rel="noopener noreferrer"><b>high capacity storage (HCS)</b></a> of the university too.
