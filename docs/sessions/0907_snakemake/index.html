@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.81.0" />
+    <meta name="description" content="">
+<meta name="author" content="Hugh Cross">
+
+    <link rel="icon" href="/hacky2021/images/favicon.png" type="image/png">
+
+    <title>Snakemake Tutorial :: Hacky Hour 2021</title>
+
+    
+    <link href="/hacky2021/css/nucleus.css?1631065717" rel="stylesheet">
+    <link href="/hacky2021/css/fontawesome-all.min.css?1631065717" rel="stylesheet">
+    <link href="/hacky2021/css/hybrid.css?1631065717" rel="stylesheet">
+    <link href="/hacky2021/css/featherlight.min.css?1631065717" rel="stylesheet">
+    <link href="/hacky2021/css/perfect-scrollbar.min.css?1631065717" rel="stylesheet">
+    <link href="/hacky2021/css/auto-complete.css?1631065717" rel="stylesheet">
+    <link href="/hacky2021/css/atom-one-dark-reasonable.css?1631065717" rel="stylesheet">
+    <link href="/hacky2021/css/theme.css?1631065717" rel="stylesheet">
+    <link href="/hacky2021/css/tabs.css?1631065717" rel="stylesheet">
+    <link href="/hacky2021/css/hugo-theme.css?1631065717" rel="stylesheet">
+    
+    <link href="/hacky2021/css/theme-green.css?1631065717" rel="stylesheet">
+    
+    
+
+    <script src="/hacky2021/js/jquery-3.3.1.min.js?1631065717"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/hacky2021/sessions/0907_snakemake/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <figure>
+  <img src='media/yellow_penguin.jpg' alt=' ' />
+  <figcaption><a href="https://otagomohio.github.io/hacky2021/"><font color="white" face="Garamond, sans-serif" size="+2">Hacky Hour 2021</font></a></figcaption>
+</figure>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/hacky2021/js/lunr.min.js?1631065717"></script>
+<script type="text/javascript" src="/hacky2021/js/auto-complete.js?1631065717"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/otagomohio.github.io\/hacky2021\/";
+    
+</script>
+<script type="text/javascript" src="/hacky2021/js/search.js?1631065717"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/" title="Basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/">
+          <i class="fas fa-wrench"></i> Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/transferring_files/" title="Transferring Files" class="dd-item ">
+        <a href="/hacky2021/basics/transferring_files/">
+        Transferring Files
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/tmux_basics/" title="Tmux basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/tmux_basics/">
+          Tmux basics
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/regular_expressions/" title="Regular expressions" class="dd-item ">
+        <a href="/hacky2021/basics/regular_expressions/">
+        Regular expressions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/shell_scripting_basics/" title="Shell scripting basics" class="dd-item ">
+        <a href="/hacky2021/basics/shell_scripting_basics/">
+        Shell scripting basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/sessions/" title="Sessions" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/hacky2021/sessions/">
+          <i class="fas fa-users"></i> Sessions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0713_data_management/" title="Data management" class="dd-item ">
+        <a href="/hacky2021/sessions/0713_data_management/">
+        Data management
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0810_vscode_tricks/" title="Text Editor Hacks" class="dd-item ">
+        <a href="/hacky2021/sessions/0810_vscode_tricks/">
+        Text Editor Hacks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0907_snakemake/" title="Snakemake Tutorial" class="dd-item active">
+        <a href="/hacky2021/sessions/0907_snakemake/">
+        Snakemake Tutorial
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/nesi/" title="NeSI" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/nesi/">
+          <i class="fab fa-mixcloud"></i> NeSI
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/nesi_links/" title="NeSI Links" class="dd-item ">
+        <a href="/hacky2021/nesi/nesi_links/">
+        NeSI Links
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/collaboration_server/" title="Collaboration on NeSI" class="dd-item ">
+        <a href="/hacky2021/nesi/collaboration_server/">
+        Collaboration on NeSI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/bugs/" title="Debugging" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/bugs/">
+          <i class="fas fa-bug"></i> Debugging
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/troubleshooting/" title="Troubleshooting errors" class="dd-item ">
+        <a href="/hacky2021/bugs/troubleshooting/">
+        Troubleshooting errors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/getting_help/" title="Getting help" class="dd-item ">
+        <a href="/hacky2021/bugs/getting_help/">
+        Getting help
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/concepts/" title="Concepts" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/concepts/">
+          <i class="fas fa-yin-yang"></i> Concepts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/concepts/building_blocks/" title="Building blocks" class="dd-item ">
+        <a href="/hacky2021/concepts/building_blocks/">
+        Building blocks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/kura_reo/" title="Kura Reo" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/kura_reo/">
+          <i class="fas fa-fire"></i> Kura Reo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/kura_reo/maori_informatics/" title="Maori Bioinformatic Phrases" class="dd-item ">
+        <a href="/hacky2021/kura_reo/maori_informatics/">
+        Maori Bioinformatic Phrases
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/hacky2021/'>Hacky Hour 2021</a> > <a href='/hacky2021/sessions/'>Sessions</a> > Snakemake Tutorial
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-the-heck-is-a-snakemake">What the heck is a snakemake?</a>
+      <ul>
+        <li></li>
+        <li><a href="#what-is-a-workflow-manager">What is a workflow manager?</a></li>
+        <li><a href="#but-whats-in-it-for-me">But what&rsquo;s in it for me?</a></li>
+        <li><a href="#how-does-it-work-then">How does it work then?</a></li>
+        <li><a href="#the-goal">The goal?</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#many-options-to-organise-your-workflow">Many options to organise your workflow</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Snakemake Tutorial
+            </h1>
+          
+
+        
+
+
+<p>Written and presented by Julie Blommaert</p>
+<h2 id="what-the-heck-is-a-snakemake">What the heck is a snakemake?</h2>
+<h4 id="is-it-a-snake-that-likes-to-make-cake">Is it a snake that likes to make cake?</h4>
+<p><img src="../sessions_images/SnakemakeSlide1.png" alt="cake"></p>
+<h4 id="its-a-workflow-manager">It&rsquo;s a workflow manager:</h4>
+<p><img src="../sessions_images/SnakemakeSlide2.png" alt="workflow"></p>
+<h3 id="what-is-a-workflow-manager">What is a workflow manager?</h3>
+<p>Examples of workflow graphs produced by Snakemake:</p>
+<p><img src="../sessions_images/SnakemakeSlide3.png" alt="example_graphs"></p>
+<h3 id="but-whats-in-it-for-me">But what&rsquo;s in it for me?</h3>
+<ul>
+<li>Reproducibility
+<ul>
+<li>Not just good for science, but good for future you</li>
+</ul>
+</li>
+<li>Record keeping</li>
+<li>Easy to share</li>
+<li>Adaptability</li>
+</ul>
+<h3 id="how-does-it-work-then">How does it work then?</h3>
+<ul>
+<li>Each step is called a &ldquo;rule&rdquo;</li>
+<li>Each rule is defined by input and output files, and a task</li>
+<li>Snakemake can then figure out how the tasks are connected and if any files are missing or have been updated</li>
+<li>Snakemake builds on Python syntax, but you can use other languages within it (e.g. bash, R)</li>
+</ul>
+<p>An example with explanations:</p>
+<p><img src="../sessions_images/SnakemakeSlide4.png" alt="example2"></p>
+<p>Code example of two &lsquo;rules&rsquo;:</p>
+<pre><code>rule genome_admin:
+    &quot;&quot;&quot;
+    Shorten the fasta headers,make a blastdb, and fasta index the genome
+    &quot;&quot;&quot;
+    params:
+        genome = config[&quot;genome_name&quot;]
+    input:
+        assembly=expand(&quot;assemblies/{name}.fasta&quot;,name=config[&quot;genome_name&quot;])
+    output:
+        index =expand(&quot;assemblies/{name}.fasta.fai&quot;,name=config[&quot;genome_name&quot;])
+    shell:
+        &quot;&quot;&quot;
+        samtools faidx {input.assembly} 
+        makeblastdb -in {input.assembly} -parse_seqids -dbtype nucl
+        &quot;&quot;&quot;
+        
+rule get_genome_fasta:
+    &quot;&quot;&quot;
+    Retrieve the sequence in fasta format for a genome.
+    &quot;&quot;&quot;
+    threads: 1
+    params:
+        genomelink = config[&quot;ncbi_link&quot;]
+    output:
+        outfile=expand(&quot;assemblies/{name}.fasta&quot;,name=config[&quot;genome_name&quot;])
+    shell:
+        &quot;&quot;&quot;
+        wget {params.genomelink} -O temp.gz
+        gunzip temp.gz        
+        cat temp| awk '{{if($1~&quot;&gt;&quot;){{printf($1&quot;\\n&quot;)}}else{{print $0}}}}'&gt; {output.outfile}
+        &quot;&quot;&quot;
+</code></pre><p>The specific files on which the Snakemake workflow operates are determined by a config file:</p>
+<p><strong>config.yml:</strong></p>
+<pre><code>genome_name: cygAtr1
+ncbi_link: https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/013/377/495/GCF_013377495.1_Cygnus_atratus_primary_v1.0/GCF_013377495.1_Cygnus_atratus_primary_v1.0_genomic.fna.gz
+masking_lib: /proj/sllstore2017073/private/RepeatLibs/lycPyr2_rm2.1_merged.lib
+</code></pre><h3 id="the-goal">The goal?</h3>
+<p>a larger workflow:</p>
+<p><img src="../sessions_images/SnakemakeSlide5.png" alt="large_example"></p>
+<h3 id="links">Links</h3>
+<p>More comprehensive tutorials:</p>
+<ul>
+<li><a href="https://nbis-reproducible-research.readthedocs.io/en/course_2104/snakemake/" target="_blank" rel="noopener noreferrer"><b>NBIS Workshop </b></a></li>
+<li><a href="https://carpentries-incubator.github.io/workflows-snakemake/" target="_blank" rel="noopener noreferrer"><b>Data Carpentry Lesson on Snakemake</b></a></li>
+<li><a href="https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html" target="_blank" rel="noopener noreferrer"><b>Snakemake Tutorial</b></a></li>
+<li><a href="https://snakemake.readthedocs.io/en/stable/" target="_blank" rel="noopener noreferrer"><b>Snakemake Documentation Page</b></a></li>
+</ul>
+<h3 id="many-options-to-organise-your-workflow">Many options to organise your workflow</h3>
+<ul>
+<li>Bash scripts (you have to start some place)</li>
+<li><a href="https://usegalaxy.org/" target="_blank" rel="noopener noreferrer"><b>Galaxy (web-based workflow)</b></a></li>
+<li><a href="https://www.nextflow.io/" target="_blank" rel="noopener noreferrer"><b>Nextflow</b></a></li>
+<li><a href="https://www.commonwl.org/user_guide/" target="_blank" rel="noopener noreferrer"><b>Common Workflow Language (CWL)</b></a></li>
+</ul>
+<p><img src="../sessions_images/SnakemakeSlide6.png" alt="many_options"></p>
+<p><a href="" target="_blank" rel="noopener noreferrer"><b></b></a></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/hacky2021/sessions/0810_vscode_tricks/" title="Text Editor Hacks"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/hacky2021/nesi/" title="NeSI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/hacky2021/js/clipboard.min.js?1631065717"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.min.js?1631065717"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.jquery.min.js?1631065717"></script>
+    <script src="/hacky2021/js/jquery.sticky.js?1631065717"></script>
+    <script src="/hacky2021/js/featherlight.min.js?1631065717"></script>
+    <script src="/hacky2021/js/highlight.pack.js?1631065717"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/hacky2021/js/modernizr.custom-3.6.0.js?1631065717"></script>
+    <script src="/hacky2021/js/learn.js?1631065717"></script>
+    <script src="/hacky2021/js/hugo-learn.js?1631065717"></script>
+    
+        
+            <script src="/hacky2021/mermaid/mermaid.js?1631065717"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

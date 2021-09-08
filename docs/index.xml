@@ -106,6 +106,17 @@ Quick tip: getting your script running Once you have written your script, in ord
     </item>
     
     <item>
+      <title>Snakemake Tutorial</title>
+      <link>https://otagomohio.github.io/hacky2021/sessions/0907_snakemake/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +1200</pubDate>
+      
+      <guid>https://otagomohio.github.io/hacky2021/sessions/0907_snakemake/</guid>
+      <description>Written and presented by Julie Blommaert
+What the heck is a snakemake? Is it a snake that likes to make cake? It&amp;rsquo;s a workflow manager: What is a workflow manager? Examples of workflow graphs produced by Snakemake:
+But what&amp;rsquo;s in it for me?  Reproducibility  Not just good for science, but good for future you   Record keeping Easy to share Adaptability  How does it work then?  Each step is called a &amp;ldquo;rule&amp;rdquo; Each rule is defined by input and output files, and a task Snakemake can then figure out how the tasks are connected and if any files are missing or have been updated Snakemake builds on Python syntax, but you can use other languages within it (e.</description>
+    </item>
+    
+    <item>
       <title>Regular expressions</title>
       <link>https://otagomohio.github.io/hacky2021/basics/regular_expressions/</link>
       <pubDate>Wed, 24 Mar 2021 12:58:37 +1300</pubDate>
