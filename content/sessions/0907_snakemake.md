@@ -116,7 +116,8 @@ More comprehensive tutorials:
 - <a href="https://www.nextflow.io/" target="_blank" rel="noopener noreferrer"><b>Nextflow</b></a>
 - <a href="https://www.commonwl.org/user_guide/" target="_blank" rel="noopener noreferrer"><b>Common Workflow Language (CWL)</b></a>
 
-![many_options](../sessions_images/SnakemakeSlide6.png)
 
-
-<a href="" target="_blank" rel="noopener noreferrer"><b></b></a>
+ <figure>
+  <img src="../sessions_images/SnakemakeSlide6.png" alt="many_options" style="width:100%">
+  <figcaption style="text-align: center"><a href="https://nbis-reproducible-research.readthedocs.io/en/course_2104/snakemake/" target="_blank" rel="noopener noreferrer">Image from NBIS Workshop</a></figcaption>
+</figure> 
