@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.81.0" />
+    <meta name="description" content="">
+<meta name="author" content="Hugh Cross">
+
+    <link rel="icon" href="/hacky2021/images/favicon.png" type="image/png">
+
+    <title>Intro to Jupyter R on NeSI :: Hacky Hour 2021</title>
+
+    
+    <link href="/hacky2021/css/nucleus.css?1632445239" rel="stylesheet">
+    <link href="/hacky2021/css/fontawesome-all.min.css?1632445239" rel="stylesheet">
+    <link href="/hacky2021/css/hybrid.css?1632445239" rel="stylesheet">
+    <link href="/hacky2021/css/featherlight.min.css?1632445239" rel="stylesheet">
+    <link href="/hacky2021/css/perfect-scrollbar.min.css?1632445239" rel="stylesheet">
+    <link href="/hacky2021/css/auto-complete.css?1632445239" rel="stylesheet">
+    <link href="/hacky2021/css/atom-one-dark-reasonable.css?1632445239" rel="stylesheet">
+    <link href="/hacky2021/css/theme.css?1632445239" rel="stylesheet">
+    <link href="/hacky2021/css/tabs.css?1632445239" rel="stylesheet">
+    <link href="/hacky2021/css/hugo-theme.css?1632445239" rel="stylesheet">
+    
+    <link href="/hacky2021/css/theme-green.css?1632445239" rel="stylesheet">
+    
+    
+
+    <script src="/hacky2021/js/jquery-3.3.1.min.js?1632445239"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/hacky2021/sessions/0921_ronnesi/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <figure>
+  <img src='media/yellow_penguin.jpg' alt=' ' />
+  <figcaption><a href="https://otagomohio.github.io/hacky2021/"><font color="white" face="Garamond, sans-serif" size="+2">Hacky Hour 2021</font></a></figcaption>
+</figure>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/hacky2021/js/lunr.min.js?1632445239"></script>
+<script type="text/javascript" src="/hacky2021/js/auto-complete.js?1632445239"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/otagomohio.github.io\/hacky2021\/";
+    
+</script>
+<script type="text/javascript" src="/hacky2021/js/search.js?1632445239"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/" title="Basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/">
+          <i class="fas fa-wrench"></i> Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/transferring_files/" title="Transferring Files" class="dd-item ">
+        <a href="/hacky2021/basics/transferring_files/">
+        Transferring Files
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/tmux_basics/" title="Tmux basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/tmux_basics/">
+          Tmux basics
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/regular_expressions/" title="Regular expressions" class="dd-item ">
+        <a href="/hacky2021/basics/regular_expressions/">
+        Regular expressions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/shell_scripting_basics/" title="Shell scripting basics" class="dd-item ">
+        <a href="/hacky2021/basics/shell_scripting_basics/">
+        Shell scripting basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/sessions/" title="Sessions" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/hacky2021/sessions/">
+          <i class="fas fa-users"></i> Sessions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0713_data_management/" title="Data management" class="dd-item ">
+        <a href="/hacky2021/sessions/0713_data_management/">
+        Data management
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0810_vscode_tricks/" title="Text Editor Hacks" class="dd-item ">
+        <a href="/hacky2021/sessions/0810_vscode_tricks/">
+        Text Editor Hacks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0907_snakemake/" title="Snakemake Tutorial" class="dd-item ">
+        <a href="/hacky2021/sessions/0907_snakemake/">
+        Snakemake Tutorial
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0921_ronnesi/" title="Intro to Jupyter R on NeSI" class="dd-item active">
+        <a href="/hacky2021/sessions/0921_ronnesi/">
+        Intro to Jupyter R on NeSI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/nesi/" title="NeSI" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/nesi/">
+          <i class="fab fa-mixcloud"></i> NeSI
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/nesi_links/" title="NeSI Links" class="dd-item ">
+        <a href="/hacky2021/nesi/nesi_links/">
+        NeSI Links
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/collaboration_server/" title="Collaboration on NeSI" class="dd-item ">
+        <a href="/hacky2021/nesi/collaboration_server/">
+        Collaboration on NeSI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/bugs/" title="Debugging" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/bugs/">
+          <i class="fas fa-bug"></i> Debugging
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/troubleshooting/" title="Troubleshooting errors" class="dd-item ">
+        <a href="/hacky2021/bugs/troubleshooting/">
+        Troubleshooting errors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/getting_help/" title="Getting help" class="dd-item ">
+        <a href="/hacky2021/bugs/getting_help/">
+        Getting help
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/concepts/" title="Concepts" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/concepts/">
+          <i class="fas fa-yin-yang"></i> Concepts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/concepts/building_blocks/" title="Building blocks" class="dd-item ">
+        <a href="/hacky2021/concepts/building_blocks/">
+        Building blocks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/kura_reo/" title="Kura Reo" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/kura_reo/">
+          <i class="fas fa-fire"></i> Kura Reo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/kura_reo/maori_informatics/" title="Maori Bioinformatic Phrases" class="dd-item ">
+        <a href="/hacky2021/kura_reo/maori_informatics/">
+        Maori Bioinformatic Phrases
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/hacky2021/'>Hacky Hour 2021</a> > <a href='/hacky2021/sessions/'>Sessions</a> > Intro to Jupyter R on NeSI
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-a-package-in-r-on-jupyter">install a package in R on Jupyter</a>
+      <ul>
+        <li><a href="#r-jobs">R jobs</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Intro to Jupyter R on NeSI
+            </h1>
+          
+
+        
+
+
+<p>Written and presented by Ludovic Dutoit</p>
+<h2 id="install-a-package-in-r-on-jupyter">install a package in R on Jupyter</h2>
+<p>To run this example, you will need to log on to JupyterHub, and launch an R notebook:</p>
+<p><img src="../sessions_images/ronesi1.png" alt="launch"></p>
+<p>try loading an uninstalled library from a Jupyter R 4.0.1 notebook</p>
+<p><img src="../sessions_images/ronesi2.png" alt="load_uninstalled"></p>
+<p>It is worth trying first because a lot of things are pre-installed:</p>
+<p><img src="../sessions_images/ronesi3.png" alt="many_libs"></p>
+<p><a href="../sessions_images/list_R_4.0.1_libraries.html" target="_blank" rel="noopener noreferrer"><b>Here is a list of all R libraries on R 4.0.1</b></a></p>
+<p>If you try installing something from within the R notebook on Jupyter, it won&rsquo;t work:</p>
+<p><img src="../sessions_images/ronesi4.png" alt="wont_install"></p>
+<p>This is the trap! The solution is not too complicated but there is no other easy work around.</p>
+<p><img src="../sessions_images/admiral_ackbar1.jpg" alt="ackbar"></p>
+<p>You actually need to:</p>
+<ol>
+<li>Go in the terminal (can be done from the jupyter notebook)</li>
+<li>Find and load the version of R used on jupyter notebook</li>
+<li>Install your package</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">module spider R <span style="color:#75715e"># find the version</span>
+module load R   R/4.0.1-gimkl-2020a <span style="color:#75715e">#load the version</span>
+</code></pre></div><p>Open R by running <code>R</code> in the terminal and you should now be able to install and load the package (after choosing a CRAN session)</p>
+<pre><code>R
+install.packages(&quot;cowsay&quot;)
+library(&quot;cowsay&quot;)
+
+</code></pre><p>If you now get back into the notebook or the console, you can access this package.</p>
+<p><img src="../sessions_images/ronesi5.png" alt="back_to_working"></p>
+<p>Very good, but I was led to believe it would be a cow:</p>
+<p><img src="../sessions_images/ronesi6.png" alt="moocow"></p>
+<p><img src="../sessions_images/ronesi7.png" alt="random_cow"></p>
+<p>Okay, we are getting distracted here.</p>
+<p><em>Be aware that a package installed for one version of R would need to be re-installed for a different R version. If you remember having installed a package but R cannot find it, you are likely to be using the wrong R version.</em></p>
+<h3 id="r-jobs">R jobs</h3>
+<p>A job file cannot be an Rscript. You will prepare a <em>bash</em> job file that run an Rscript.</p>
+<p>Using nano or the jupyter text editor we can create a basic R script making a simple plot. Let&rsquo;s call it <em>testscript.R</em> and fill it with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">png</span>(filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;plot.png&#34;</span>)  <span style="color:#75715e"># This line redirects plots from screen to plot.png file.</span>
+
+<span style="color:#75715e"># Define the cars vector with 5 values</span>
+cars <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">9</span>)
+
+<span style="color:#75715e"># Graph the cars vector with all defaults</span>
+<span style="color:#a6e22e">plot</span>(cars)
+</code></pre></div><p>Now let&rsquo;s make a bash file that can run it <em>run_testscript.sh</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/bash -e
+</span><span style="color:#75715e"></span><span style="color:#75715e">#SBATCH --account uoo00116 # CHANGE</span>
+<span style="color:#75715e">#SBATCH --job-name    runtestscriptR</span>
+<span style="color:#75715e">#SBATCH --time        00:01:00</span>
+<span style="color:#75715e">#SBATCH --mem         512MB</span>
+<span style="color:#75715e">#SBATCH --qos debug</span>
+module load R/4.0.1-gimkl-2020a
+
+<span style="color:#75715e"># Help R to flush errors and show overall job progress by printing</span>
+<span style="color:#75715e"># &#34;executing&#34; and &#34;finished&#34; statements.</span>
+echo <span style="color:#e6db74">&#34;Executing R ...&#34;</span>
+srun Rscript testscript.R
+echo <span style="color:#e6db74">&#34;R finished.&#34;</span>
+</code></pre></div><p>You can now submit that run_testscript.sh file that will run the testscript.R.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sbatch run_testscript.sh
+squeue -u $USER <span style="color:#75715e">#will show you th queue of jobs, if it is emopty, it ran or bugged</span>
+</code></pre></div><p>You should have a <em>plot.png</em> file in your directory.</p>
+<p>In summary, I hope you&rsquo;ll remember the cowsay R package and maybe other things!</p>
+<p><a href="../sessions_images/install_R_package_demo.html" target="_blank" rel="noopener noreferrer"><b>Here is a web version of the Jupyter notebook used for this session</b></a></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/hacky2021/sessions/0907_snakemake/" title="Snakemake Tutorial"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/hacky2021/nesi/" title="NeSI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/hacky2021/js/clipboard.min.js?1632445239"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.min.js?1632445239"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.jquery.min.js?1632445239"></script>
+    <script src="/hacky2021/js/jquery.sticky.js?1632445239"></script>
+    <script src="/hacky2021/js/featherlight.min.js?1632445239"></script>
+    <script src="/hacky2021/js/highlight.pack.js?1632445239"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/hacky2021/js/modernizr.custom-3.6.0.js?1632445239"></script>
+    <script src="/hacky2021/js/learn.js?1632445239"></script>
+    <script src="/hacky2021/js/hugo-learn.js?1632445239"></script>
+    
+        
+            <script src="/hacky2021/mermaid/mermaid.js?1632445239"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

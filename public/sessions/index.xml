@@ -40,5 +40,19 @@ What the heck is a snakemake? Is it a snake that likes to make cake? It&amp;rsqu
 But what&amp;rsquo;s in it for me?  Reproducibility  Not just good for science, but good for future you   Record keeping Easy to share Adaptability  How does it work then?  Each step is called a &amp;ldquo;rule&amp;rdquo; Each rule is defined by input and output files, and a task Snakemake can then figure out how the tasks are connected and if any files are missing or have been updated Snakemake builds on Python syntax, but you can use other languages within it (e.</description>
     </item>
     
+    <item>
+      <title>Intro to Jupyter R on NeSI</title>
+      <link>https://otagomohio.github.io/hacky2021/sessions/0921_ronnesi/</link>
+      <pubDate>Tue, 21 Sep 2021 00:00:00 +1200</pubDate>
+      
+      <guid>https://otagomohio.github.io/hacky2021/sessions/0921_ronnesi/</guid>
+      <description>Written and presented by Ludovic Dutoit
+install a package in R on Jupyter To run this example, you will need to log on to JupyterHub, and launch an R notebook:
+try loading an uninstalled library from a Jupyter R 4.0.1 notebook
+It is worth trying first because a lot of things are pre-installed:
+Here is a list of all R libraries on R 4.0.1
+If you try installing something from within the R notebook on Jupyter, it won&amp;rsquo;t work:</description>
+    </item>
+    
   </channel>
 </rss>
