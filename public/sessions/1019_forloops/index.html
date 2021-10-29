@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="description" content="">
+<meta name="author" content="Hugh Cross">
+
+    <link rel="icon" href="/hacky2021/images/favicon.png" type="image/png">
+
+    <title>Loops :: Hacky Hour 2021</title>
+
+    
+    <link href="/hacky2021/css/nucleus.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/fontawesome-all.min.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/hybrid.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/featherlight.min.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/perfect-scrollbar.min.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/auto-complete.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/atom-one-dark-reasonable.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/theme.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/tabs.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/hugo-theme.css?1635473813" rel="stylesheet">
+    
+    <link href="/hacky2021/css/theme-green.css?1635473813" rel="stylesheet">
+    
+    
+
+    <script src="/hacky2021/js/jquery-3.3.1.min.js?1635473813"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/hacky2021/sessions/1019_forloops/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <figure>
+    <img src='media/yellow_penguin.jpg' alt='Hacky Hour 2021' />
+    <figcaption><a href="https://otagomohio.github.io/hacky2021/"><font color="white" face="Garamond, sans-serif" size="+2">Hacky Hour 2021</font></a></figcaption>
+</figure>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/hacky2021/js/lunr.min.js?1635473813"></script>
+<script type="text/javascript" src="/hacky2021/js/auto-complete.js?1635473813"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/otagomohio.github.io\/hacky2021\/";
+    
+</script>
+<script type="text/javascript" src="/hacky2021/js/search.js?1635473813"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/" title="Basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/">
+          <i class="fas fa-wrench"></i> Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/transferring_files/" title="Transferring Files" class="dd-item ">
+        <a href="/hacky2021/basics/transferring_files/">
+        Transferring Files
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/tmux_basics/" title="Tmux basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/tmux_basics/">
+          Tmux basics
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/regular_expressions/" title="Regular expressions" class="dd-item ">
+        <a href="/hacky2021/basics/regular_expressions/">
+        Regular expressions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/shell_scripting_basics/" title="Shell scripting basics" class="dd-item ">
+        <a href="/hacky2021/basics/shell_scripting_basics/">
+        Shell scripting basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/sessions/" title="Sessions" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/hacky2021/sessions/">
+          <i class="fas fa-users"></i> Sessions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0713_data_management/" title="Data management" class="dd-item ">
+        <a href="/hacky2021/sessions/0713_data_management/">
+        Data management
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0810_vscode_tricks/" title="Text Editor Hacks" class="dd-item ">
+        <a href="/hacky2021/sessions/0810_vscode_tricks/">
+        Text Editor Hacks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0907_snakemake/" title="Snakemake Tutorial" class="dd-item ">
+        <a href="/hacky2021/sessions/0907_snakemake/">
+        Snakemake Tutorial
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0921_ronnesi/" title="Intro to Jupyter R on NeSI" class="dd-item ">
+        <a href="/hacky2021/sessions/0921_ronnesi/">
+        Intro to Jupyter R on NeSI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/1005_ncbi/" title="Getting Data from NCBI" class="dd-item ">
+        <a href="/hacky2021/sessions/1005_ncbi/">
+        Getting Data from NCBI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/1019_forloops/" title="Loops" class="dd-item active">
+        <a href="/hacky2021/sessions/1019_forloops/">
+        Loops
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/nesi/" title="NeSI" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/nesi/">
+          <i class="fab fa-mixcloud"></i> NeSI
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/nesi_links/" title="NeSI Links" class="dd-item ">
+        <a href="/hacky2021/nesi/nesi_links/">
+        NeSI Links
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/collaboration_server/" title="Collaboration on NeSI" class="dd-item ">
+        <a href="/hacky2021/nesi/collaboration_server/">
+        Collaboration on NeSI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/bugs/" title="Debugging" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/bugs/">
+          <i class="fas fa-bug"></i> Debugging
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/troubleshooting/" title="Troubleshooting errors" class="dd-item ">
+        <a href="/hacky2021/bugs/troubleshooting/">
+        Troubleshooting errors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/getting_help/" title="Getting help" class="dd-item ">
+        <a href="/hacky2021/bugs/getting_help/">
+        Getting help
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/concepts/" title="Concepts" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/concepts/">
+          <i class="fas fa-yin-yang"></i> Concepts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/concepts/building_blocks/" title="Building blocks" class="dd-item ">
+        <a href="/hacky2021/concepts/building_blocks/">
+        Building blocks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/kura_reo/" title="Kura Reo" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/kura_reo/">
+          <i class="fas fa-fire"></i> Kura Reo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/kura_reo/maori_informatics/" title="Maori Bioinformatic Phrases" class="dd-item ">
+        <a href="/hacky2021/kura_reo/maori_informatics/">
+        Maori Bioinformatic Phrases
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/hacky2021/'>Hacky Hour 2021</a> > <a href='/hacky2021/sessions/'>Sessions</a> > Loops
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-bash-loop">The Bash loop</a>
+      <ul>
+        <li><a href="#job-arrays">Job arrays</a></li>
+        <li><a href="#r-loops">R Loops</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Loops
+            </h1>
+          
+
+        
+
+
+<p>Written and Presented by Ludovic Dutoit</p>
+<p>Loops are awesome at doing what computers do best, repeating an exact task many times without errors. They are commonly used to repeat a task over a list of files, or numbers, or anything you can think of.</p>
+<h2 id="the-bash-loop">The Bash loop</h2>
+<p>The basic structure of a loop is as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">for</span> &lt;variable name&gt; in &lt;a list of items&gt;
+<span style="color:#66d9ef">do</span> &lt;some command&gt; $&lt;variable name&gt;
+<span style="color:#66d9ef">done</span>
+</code></pre></div><p>The variable name will be the variable you specify in the do section and will contain the item in the loop that you&rsquo;re on.</p>
+<p>The list of items can be a lot of different things, but we often works with numbers or files.</p>
+<p>Here is a simple bash loop</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">for</span> fruit in banana lemon orange
+<span style="color:#66d9ef">do</span> echo $fruit
+<span style="color:#66d9ef">done</span>
+</code></pre></div><p><strong>Output:</strong></p>
+<pre><code>banana
+lemon
+orange
+</code></pre><p>It is important to understand that your variable (i.e. fruit) can be called anything. We just called it fruit in the example because it makes sense to us. It is important to use the $ before the variable name inside the loop cause we are referring to the variable, not the word fruit. Any word could be used instead:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">for</span> animal in banana lemon orange
+<span style="color:#66d9ef">do</span> echo first $animal
+echo second $anial
+<span style="color:#66d9ef">done</span>
+</code></pre></div><p>There are loads of resources when it comes to using loops to real life example. Below is an example on 2 little files.</p>
+<p>Let&rsquo;s create two files:</p>
+<pre><code>echo $'first file line 1 \nfirst file line 2' &gt; file1.dummy
+echo $'second file line 1 \nsecond file line 2' &gt; file2.dummy
+</code></pre><p>we can easily manipulate those files with a loop:</p>
+<pre><code>rm -f last_lines.txt # will store the last lines
+for file in *dummy
+do 
+echo $file
+tail -n 1 $file &gt;&gt; last_lines.txt # append the last line to file last_lines.txt
+done
+</code></pre><p>In this loop the last line of each file that finished by dummy is appended using &raquo; to the file last_lines.txt. A single &gt; would simply overwrite the file every time. Note that I remove the file as the first line. This is because I append in the loop and if the file already existed, I&rsquo;d end up appending to an already existing files. So I remove a file that may or may not exist as a precaution. The -f means you don&rsquo;t get an error message if the file does not exist (yet).</p>
+<p>You can check the content of the file with:</p>
+<pre><code>cat last_lines.txt
+</code></pre><h3 id="job-arrays">Job arrays</h3>
+<p>On Nesi, iterating (i.e. looping) over numbers can be used to run easily a large number of jobs. The help examples from the <a href="https://support.nesi.org.nz/hc/en-gb/articles/360000690275-Parallel-Execution#t_array">job array support page</a> was given in class.</p>
+<h3 id="r-loops">R Loops</h3>
+<p>To introduce to R loop, I am simply going to share one very well documented link that has all the info. Loops are functionally similar across programming languages, but the syntax (i.e. way of writing) varies slightly.</p>
+<p>[Data carpentry R loops]https://datacarpentry.org/semester-biology/materials/for-loops-R/</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/hacky2021/sessions/1005_ncbi/" title="Getting Data from NCBI"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/hacky2021/nesi/" title="NeSI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/hacky2021/js/clipboard.min.js?1635473814"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.min.js?1635473814"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.jquery.min.js?1635473814"></script>
+    <script src="/hacky2021/js/jquery.sticky.js?1635473814"></script>
+    <script src="/hacky2021/js/featherlight.min.js?1635473814"></script>
+    <script src="/hacky2021/js/highlight.pack.js?1635473814"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/hacky2021/js/modernizr.custom-3.6.0.js?1635473814"></script>
+    <script src="/hacky2021/js/learn.js?1635473814"></script>
+    <script src="/hacky2021/js/hugo-learn.js?1635473814"></script>
+    
+        
+            <script src="/hacky2021/mermaid/mermaid.js?1635473814"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

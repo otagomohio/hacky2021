@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="description" content="">
+<meta name="author" content="Hugh Cross">
+
+    <link rel="icon" href="/hacky2021/images/favicon.png" type="image/png">
+
+    <title>Getting Data from NCBI :: Hacky Hour 2021</title>
+
+    
+    <link href="/hacky2021/css/nucleus.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/fontawesome-all.min.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/hybrid.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/featherlight.min.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/perfect-scrollbar.min.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/auto-complete.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/atom-one-dark-reasonable.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/theme.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/tabs.css?1635473813" rel="stylesheet">
+    <link href="/hacky2021/css/hugo-theme.css?1635473813" rel="stylesheet">
+    
+    <link href="/hacky2021/css/theme-green.css?1635473813" rel="stylesheet">
+    
+    
+
+    <script src="/hacky2021/js/jquery-3.3.1.min.js?1635473813"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/hacky2021/sessions/1005_ncbi/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <figure>
+    <img src='media/yellow_penguin.jpg' alt='Hacky Hour 2021' />
+    <figcaption><a href="https://otagomohio.github.io/hacky2021/"><font color="white" face="Garamond, sans-serif" size="+2">Hacky Hour 2021</font></a></figcaption>
+</figure>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/hacky2021/js/lunr.min.js?1635473813"></script>
+<script type="text/javascript" src="/hacky2021/js/auto-complete.js?1635473813"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/otagomohio.github.io\/hacky2021\/";
+    
+</script>
+<script type="text/javascript" src="/hacky2021/js/search.js?1635473813"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/" title="Basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/">
+          <i class="fas fa-wrench"></i> Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/transferring_files/" title="Transferring Files" class="dd-item ">
+        <a href="/hacky2021/basics/transferring_files/">
+        Transferring Files
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/basics/tmux_basics/" title="Tmux basics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/basics/tmux_basics/">
+          Tmux basics
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/regular_expressions/" title="Regular expressions" class="dd-item ">
+        <a href="/hacky2021/basics/regular_expressions/">
+        Regular expressions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/basics/shell_scripting_basics/" title="Shell scripting basics" class="dd-item ">
+        <a href="/hacky2021/basics/shell_scripting_basics/">
+        Shell scripting basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/sessions/" title="Sessions" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/hacky2021/sessions/">
+          <i class="fas fa-users"></i> Sessions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0713_data_management/" title="Data management" class="dd-item ">
+        <a href="/hacky2021/sessions/0713_data_management/">
+        Data management
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0810_vscode_tricks/" title="Text Editor Hacks" class="dd-item ">
+        <a href="/hacky2021/sessions/0810_vscode_tricks/">
+        Text Editor Hacks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0907_snakemake/" title="Snakemake Tutorial" class="dd-item ">
+        <a href="/hacky2021/sessions/0907_snakemake/">
+        Snakemake Tutorial
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/0921_ronnesi/" title="Intro to Jupyter R on NeSI" class="dd-item ">
+        <a href="/hacky2021/sessions/0921_ronnesi/">
+        Intro to Jupyter R on NeSI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/1005_ncbi/" title="Getting Data from NCBI" class="dd-item active">
+        <a href="/hacky2021/sessions/1005_ncbi/">
+        Getting Data from NCBI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/sessions/1019_forloops/" title="Loops" class="dd-item ">
+        <a href="/hacky2021/sessions/1019_forloops/">
+        Loops
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/nesi/" title="NeSI" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/nesi/">
+          <i class="fab fa-mixcloud"></i> NeSI
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/nesi_links/" title="NeSI Links" class="dd-item ">
+        <a href="/hacky2021/nesi/nesi_links/">
+        NeSI Links
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/nesi/collaboration_server/" title="Collaboration on NeSI" class="dd-item ">
+        <a href="/hacky2021/nesi/collaboration_server/">
+        Collaboration on NeSI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/bugs/" title="Debugging" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/bugs/">
+          <i class="fas fa-bug"></i> Debugging
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/troubleshooting/" title="Troubleshooting errors" class="dd-item ">
+        <a href="/hacky2021/bugs/troubleshooting/">
+        Troubleshooting errors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/bugs/getting_help/" title="Getting help" class="dd-item ">
+        <a href="/hacky2021/bugs/getting_help/">
+        Getting help
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/concepts/" title="Concepts" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/concepts/">
+          <i class="fas fa-yin-yang"></i> Concepts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/concepts/building_blocks/" title="Building blocks" class="dd-item ">
+        <a href="/hacky2021/concepts/building_blocks/">
+        Building blocks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hacky2021/kura_reo/" title="Kura Reo" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hacky2021/kura_reo/">
+          <i class="fas fa-fire"></i> Kura Reo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hacky2021/kura_reo/maori_informatics/" title="Maori Bioinformatic Phrases" class="dd-item ">
+        <a href="/hacky2021/kura_reo/maori_informatics/">
+        Maori Bioinformatic Phrases
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/hacky2021/'>Hacky Hour 2021</a> > <a href='/hacky2021/sessions/'>Sessions</a> > Getting Data from NCBI
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#searching-for-genes-on-ncbi-webpage">Searching for genes on NCBI webpage</a></li>
+    <li><a href="#downloading-whole-mitogenomes">Downloading whole mitogenomes</a></li>
+    <li><a href="#downloading-whole-genomes">Downloading whole genomes</a>
+      <ul>
+        <li><a href="#searching-for-genomes-on-ncbi-search-bar">Searching for genomes on NCBI search bar</a></li>
+      </ul>
+    </li>
+    <li><a href="#ncbi-datasets-a-new-tool-to-download-genomes">NCBI Datasets: a new tool to download genomes</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Getting Data from NCBI
+            </h1>
+          
+
+        
+
+
+<p>Written and presented by Hugh Cross</p>
+<h2 id="searching-for-genes-on-ncbi-webpage">Searching for genes on NCBI webpage</h2>
+<p>This week we are going to go over some of the ways that you can access data on the NCBI webpage. One of the most common types of search on NCBI is <em>Nucleotide</em>. Go to the <a href="https://www.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer"><b>NCBI webpage</b></a> and select <code>Nucleotide</code> from the drop down menu. Then we will enter the search terms <em>cytochrome oxidase</em> gene and the organism <em>Insecta</em>. In the brackets we enter [All Fields] after cytochrome oxidase, which will look in any field for the term; for <em>Insecta</em> we enter [Organism], which will return any match at the class Insecta rank and below.</p>
+<pre><code>cytochrome oxidase[All Fields] AND Insecta[Organism]
+</code></pre><p><img src="../sessions_images/ncbi1.png" alt="nucl_search"></p>
+<p>Hit enter and you will see the search returns 2,473,852 matches. In the search result page that appears, you can modify the results. Here we select <em>Mitochondrion</em> to limit the results to genes within that organelle, and also select a size range, to avoid downloading whole mitogenome and genome assemblies.</p>
+<p><img src="../sessions_images/ncbi2.png" alt="modify_search"></p>
+<p>In the search details on the right side of the page, you can see how you would enter those terms in the search bar above (or for other command line programs that do searches, like Entrez).</p>
+<p><img src="../sessions_images/ncbi3.png" alt="search_details"></p>
+<p>For many of the data fields on NCBI, there are no standard names. In the case of a gene like cytochrome oxidase, it may be named differently, depending on the researcher that submitted it. For these cases, you can enter multiple search terms using the <code>OR</code> flag:</p>
+<pre><code>cytochrome c oxidase subunit 1[Title] OR cytochrome c oxidase subunit I[Title] OR cytochrome oxidase subunit 1[Title] OR cytochrome oxidase subunit I[Title] OR COX1[Title] OR CO1[Title] OR COI[Title] AND Insecta[Organism] AND (mitochondrion[filter] AND (&quot;1&quot;[SLEN] : &quot;3000&quot;[SLEN]))
+</code></pre><p>(The above also includes our earlier modifiers.)</p>
+<p>When you have a set of sequences that you would like to download, you can either select individual ones by selecting the box next to the name, or select all by clicking on <code>Send to:</code> and then under <code>Choose Destination</code> select <code>File</code>; under <code>Format</code> choose either <code>GenBank</code> or <code>Fasta</code> (you can also just get a list of the files).</p>
+<h2 id="downloading-whole-mitogenomes">Downloading whole mitogenomes</h2>
+<p>If you would like to download complete (or near complete) mitochondrial genomes, there are (at least) two ways to do this. There is a webpage on NCBI that contains a single file with 7,819 mitogenomes in it. These are limited to curated and annotated reference mitogenomes. The annotations can also be downloaded from this page:</p>
+<p><a href="https://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/" target="_blank" rel="noopener noreferrer"><b>NCBI page for reference mitogenomes</b></a></p>
+<p>As you might guess, there are heaps more mitogenomes that are not included in the above reference file. To access these, we can go back to the <code>Nucleotide</code> search bar and enter terms to help find them for a particular group of organisms. In the below example we are looking for beetle mitogenomes:</p>
+<pre><code>&quot;Coleoptera&quot;[Organism] AND (mitochondrion[filter] AND (&quot;10000&quot;[SLEN] : &quot;40000&quot;[SLEN]))
+</code></pre><p>Note that the length range is set to pull in only very long sequences, and avoid partial mitochondrial or single gene mitochondrial sequences.</p>
+<p>As above, you can add keywords to avoid unverified mitogenomes</p>
+<pre><code>&quot;Coleoptera&quot;[Organism] AND (&quot;complete&quot;[Title] AND  mitochondrion[filter] AND (&quot;10000&quot;[SLEN] : &quot;40000&quot;[SLEN]))
+</code></pre><p>or</p>
+<pre><code>&quot;Coleoptera&quot;[Organism] AND (mitochondrion[filter] AND (&quot;10000&quot;[SLEN] : &quot;40000&quot;[SLEN]) NOT unverified[Title])
+</code></pre><p>For any of the above searches, it is also worth considering some of the following modifiers, which can help weed out unwanted sequences.</p>
+<pre><code>AND mitochondrion[Filter]
+NOT environmental sample[Title]
+NOT environmental samples[Title]
+NOT environmental[Title] -
+NOT uncultured[Title]
+NOT unclassified[Title]
+NOT unidentified[Title]
+NOT unverified[Title]
+AND is_nuccore[filter]
+</code></pre><h2 id="downloading-whole-genomes">Downloading whole genomes</h2>
+<p>For obtaining whole genome sequences, along with associated protein and annotation information, there are a couple of ways to go. You could go direct to the FTP download site:</p>
+<p><a href="https://ftp.ncbi.nlm.nih.gov/genomes/" target="_blank" rel="noopener noreferrer"><b><a href="https://ftp.ncbi.nlm.nih.gov/genomes/">https://ftp.ncbi.nlm.nih.gov/genomes/</a></b></a></p>
+<p>And from there you can navigate your way to the genome of your choice:</p>
+<p><img src="../sessions_images/ncbi4.png" alt="gnome_navigation"></p>
+<p>When you get to the organism of your choice, there are usually multiple files to choose from:</p>
+<p><img src="../sessions_images/ncbi5.png" alt="gnome_detail"></p>
+<p>There are in general two main sets of genome files: <em>refseq</em> and <em>genbank</em>. Of these, refseq are always annotated and considered the reference for that organism. Genbank genomes can be annotated, but not always.</p>
+<h3 id="searching-for-genomes-on-ncbi-search-bar">Searching for genomes on NCBI search bar</h3>
+<p>You can also use the search bar, as we did above for Nucleotide searches, to search for genomes. For accessing the actual sequences, it is better to choose the <code>Assembly</code> search from the dropdown menu. This will give you access to the actual genome files. You can further modify this search as above by selecting terms; the most common is to filter by level of completeness (e.g. Complete, Chromosome, Scaffold, or Contig):</p>
+<p><img src="../sessions_images/ncbi6.png" alt="gnome_search"></p>
+<p>Using the <code>Genome</code> search tool will give you summary information about each taxon, which will require more pointing and clicking to get to a single genome. With the <code>Assembly</code> search tool, you can either click on the blue <code>Download Assemblies</code> button, or get a list of the genome accessions by selecting on <code>Send to:</code> button:</p>
+<p><img src="../sessions_images/ncbi7.png" alt="gnome_send_to"></p>
+<p>The <code>Send to</code> action will download a tabular file called <em>assembly_result.txt</em> of genome accessions for both genbank and refseq. I often use this table to make a list of accessions to download with another tool such as NCBI <em>Datasets</em> (described below). Here is an example assembly_result file:</p>
+<p><img src="../sessions_images/ncbi8.png" alt="assembly_result"></p>
+<p>To get a list of just Genbank accessions from this file:</p>
+<pre><code>grep -v 'GenBank' assembly_result.txt | cut -f 1 &gt; gb_accession_list.txt 
+</code></pre><p>To get just the refseq files (if there are any)</p>
+<pre><code>grep -v 'GenBank' assembly_result.txt | grep -v 'N/A' | cut -f 3 &gt; ref_accession_list.txt 
+</code></pre><p>To get refseq accession, or if there isn&rsquo;t a refseq, get genbank instead:</p>
+<pre><code>cat assembly_result.txt | while read line;
+do
+genbank=$(echo &quot;${line}&quot; | cut -f 1)
+refseq=$(echo &quot;${line}&quot; | cut -f 3)
+if [[ &quot;${refseq}&quot; = 'N/A' ]]
+then echo $genbank &gt;&gt; genomes_to_download.txt
+elif [[ &quot;${refseq}&quot; = 'RefSeq Assembly ID (Accession.version)' ]]
+then echo 'starting'
+else echo $refseq &gt;&gt; genomes_to_download.txt
+fi
+done
+</code></pre><h2 id="ncbi-datasets-a-new-tool-to-download-genomes">NCBI Datasets: a new tool to download genomes</h2>
+<p>NCBI has produced a new command line tool called <a href="https://www.ncbi.nlm.nih.gov/datasets/docs/v1/reference-docs/command-line/datasets/" target="_blank" rel="noopener noreferrer"><b>Datasets</b></a> to make downloading data easier. It is still in &lsquo;beta&rsquo; mode, but seems to work for the most part. There is an <a href="https://www.ncbi.nlm.nih.gov/datasets/new/docs/how-tos/genomes/" target="_blank" rel="noopener noreferrer"><b>online manual</b></a> with many examples, but below we will show how to download a genome or list of genomes.</p>
+<p>To download a single genome by accession number:</p>
+<pre><code>datasets download genome accession GCF_000500325.1
+</code></pre><p>For larger genomes, they recommend to download the summary information first, so you can look it over. The tool will by default download the protein sequences and annotation files as well (though you can turn this off), so will be a <em>large</em> download. Use with caution.</p>
+<p>To download the <code>dehydrated</code> version (just summary tables), from a file with a list of accessions</p>
+<pre><code>datasets download genome accession --inputfile genomes_to_download.txt --dehydrated 
+</code></pre><p>You can use the related tool <a href="https://www.ncbi.nlm.nih.gov/datasets/docs/v1/reference-docs/command-line/dataformat/" target="_blank" rel="noopener noreferrer"><b>Dataformat</b></a> to make the summary information easier to read</p>
+<p>Unzip the downloaded file first</p>
+<pre><code>unzip ncbi_dataset.zip -d genome_folder
+</code></pre><p>(the <code>-d</code> parameter changes the name of the zip file.)</p>
+<p>Then use dataformat to convert the <em>json</em> formatted report to a tab-delimited file:</p>
+<pre><code>dataformat tsv genome \
+ --inputfile genome_folder/ncbi_dataset/data/assembly_data_report.jsonl \
+ &gt; ./genome_assembly_data_report.tsv 
+</code></pre><p>The resulting table has loads of information. You can use some command line tools to get just the interesting bits:</p>
+<pre><code>cut -f 18,22,23,27,29,44,57,59,60 genome_assembly_data_report.tsv &gt; genome_summary.tsv 
+</code></pre><p>I picked out those columns that seemed to give the most interesting information. You can go through the full table (easiest in Excel) to find the most useful to you.</p>
+<p><img src="../sessions_images/ncbi9.png" alt="genome_summary"></p>
+<p>If you have decided to download all the genomes, you can <em>rehydrate</em> (what else?).</p>
+<pre><code>datasets rehydrate --directory genome_folder/
+</code></pre><p>See the online manual for more options</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/hacky2021/sessions/0921_ronnesi/" title="Intro to Jupyter R on NeSI"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/hacky2021/sessions/1019_forloops/" title="Loops" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/hacky2021/js/clipboard.min.js?1635473814"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.min.js?1635473814"></script>
+    <script src="/hacky2021/js/perfect-scrollbar.jquery.min.js?1635473814"></script>
+    <script src="/hacky2021/js/jquery.sticky.js?1635473814"></script>
+    <script src="/hacky2021/js/featherlight.min.js?1635473814"></script>
+    <script src="/hacky2021/js/highlight.pack.js?1635473814"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/hacky2021/js/modernizr.custom-3.6.0.js?1635473814"></script>
+    <script src="/hacky2021/js/learn.js?1635473814"></script>
+    <script src="/hacky2021/js/hugo-learn.js?1635473814"></script>
+    
+        
+            <script src="/hacky2021/mermaid/mermaid.js?1635473814"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+
